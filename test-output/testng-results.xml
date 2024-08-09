@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-08-08T18:05:18 IST" name="Suite" finished-at="2024-08-08T18:05:27 IST" duration-ms="9078">
+    <groups>
+      <group name="Regression">
+        <method signature="TestNG.signupuser()[pri:1, instance:com.selenium.fta.TestNG.TestNG@16150369]" name="signupuser" class="com.selenium.fta.TestNG.TestNG"/>
+      </group> <!-- Regression -->
+    </groups>
+    <test started-at="2024-08-08T18:05:18 IST" name="Test" finished-at="2024-08-08T18:05:27 IST" duration-ms="9078">
+      <class name="com.selenium.fta.TestNG.TestNG">
+        <test-method is-config="true" signature="launch_browsers()[pri:0, instance:com.selenium.fta.TestNG.TestNG@16150369]" started-at="2024-08-08T18:05:18 IST" name="launch_browsers" finished-at="2024-08-08T18:05:25 IST" duration-ms="7144" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch_browsers -->
+        <test-method signature="signupuser()[pri:1, instance:com.selenium.fta.TestNG.TestNG@16150369]" started-at="2024-08-08T18:05:25 IST" name="signupuser" finished-at="2024-08-08T18:05:27 IST" duration-ms="1887" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signupuser -->
+      </class> <!-- com.selenium.fta.TestNG.TestNG -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
