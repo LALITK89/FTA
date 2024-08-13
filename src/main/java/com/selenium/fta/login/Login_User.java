@@ -21,6 +21,10 @@ public class Login_User
 	
 	@FindBy(xpath="/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]/div[2]/div[2]/form/div[5]/input")
 	static private WebElement Login_btn;
+	
+	
+	
+	
     
 	public void login()
      {
@@ -31,4 +35,5 @@ public class Login_User
         Utilityclass.clickmethod(Remeber_Chk);
         Utilityclass.clickmethod(Login_btn);
     }
+	
    }

@@ -1,7 +1,6 @@
 package com.selenium.fta.signup;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -48,7 +47,7 @@ public void signupuser()
  	    Utilityclass.inputmethod(first_name,"Lalit");
 		Utilityclass.inputmethod(last_name,"Kumar");
 		Utilityclass.inputmethod(Email_id,"testing@gmail.com");
-		Utilityclass.driver.findElement(By.id("Email"));
+		//String EmailID = Utilityclass.driver.findElement(By.id("Email_id"));
 		Utilityclass.inputmethod(password_In,"Welcome@123");
 		Utilityclass.inputmethod(confirm_Password,"Welcome@123");
 		Utilityclass.clickmethod(register_btn);
