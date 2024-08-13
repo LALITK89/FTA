@@ -7,5 +7,6 @@ public class Close_Browser
 	public void Browserclose()
 	{
 	Utilityclass.driver.close();
+	System.out.println("Verify");
 	}
 }
