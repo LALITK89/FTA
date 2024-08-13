@@ -1,7 +1,9 @@
 package com.selenium.fta.signup;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -41,11 +43,12 @@ public void signupuser()
 {
 	    PageFactory.initElements(Utilityclass.driver, Signup_User.class);
  	    Utilityclass.clickmethod(signup_btn);
- 	    Utilityclass.driver.manage().timeouts().implicitlyWait(20000,TimeUnit.SECONDS);
+ 	    Utilityclass.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2000));
  	    Utilityclass.clickmethod(Gender);
  	    Utilityclass.inputmethod(first_name,"Lalit");
 		Utilityclass.inputmethod(last_name,"Kumar");
 		Utilityclass.inputmethod(Email_id,"testing@gmail.com");
+		Utilityclass.driver.findElement(By.id("Email"));
 		Utilityclass.inputmethod(password_In,"Welcome@123");
 		Utilityclass.inputmethod(confirm_Password,"Welcome@123");
 		Utilityclass.clickmethod(register_btn);
