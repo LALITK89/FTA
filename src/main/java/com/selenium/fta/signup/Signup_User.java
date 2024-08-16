@@ -49,7 +49,6 @@ public void signupuser()
  	    Utilityclass.inputmethod(first_name,"Lalit");
 		Utilityclass.inputmethod(last_name,"Kumar");
 		Utilityclass.inputmethod(Email_id,"testing@gmail.com");
-		//String EmailID = Utilityclass.driver.findElement(By.id("Email_id")).getAttribute("value");
 		Utilityclass.inputmethod(Email_id,"lalit.kumar@inveniolsi.com");
 		//String EmailID = Utilityclass.driver.findElement(By.id("Email")).getAttribute("value");
 		Utilityclass.inputmethod(password_In,"Welcome@123");
