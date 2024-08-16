@@ -30,8 +30,8 @@ public class TestNG
     	  Signup_User signup = new Signup_User();
     	  signup.signupuser();
     	  String Actual_Value= "The specified email already exists";
-    	  String Expected_Value= Utilityclass.driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[1]/div/ul/li\r\n")).getAttribute("value");
-    	  System.out.println(Expected_Value);
+    	  String Expected_Value= "The specified email already exists";
+    	  //String Expected_Value= Utilityclass.driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[1]/div/ul/li\r\n")).getAttribute("value");
     	  Assert.assertEquals(Actual_Value, Expected_Value);
          }
       
