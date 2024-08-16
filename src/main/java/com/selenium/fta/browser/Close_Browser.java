@@ -8,7 +8,6 @@ public class Close_Browser
 	{
 	Utilityclass.driver.close();
 	System.out.println("Verify");
-	System.out.println("Verify1");
 	
 	
 	}
