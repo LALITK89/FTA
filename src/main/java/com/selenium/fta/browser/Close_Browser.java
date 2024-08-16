@@ -9,5 +9,6 @@ public class Close_Browser
 	Utilityclass.driver.close();
 	System.out.println("Verify");
 	System.out.println("added Saurabh");
+	System.out.println("added Lalit");
 		}
 }
