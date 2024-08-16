@@ -1,6 +1,8 @@
 package com.selenium.fta.TestNG;
 
 import java.io.IOException;
+import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -9,6 +11,7 @@ import com.selenium.fta.browser.Launch_Browser;
 import com.selenium.fta.login.Login_User;
 import com.selenium.fta.logout.logout;
 import com.selenium.fta.signup.Signup_User;
+import com.selenium.fta.utility.Utilityclass;
 
 public class TestNG 
 
@@ -26,6 +29,10 @@ public class TestNG
          {
     	  Signup_User signup = new Signup_User();
     	  signup.signupuser();
+    	  String Actual_Value= "The specified email already exists";
+    	  String Expected_Value= Utilityclass.driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[1]/div/ul/li\r\n")).getAttribute("value");
+    	  System.out.println(Expected_Value);
+    	  Assert.assertEquals(Actual_Value, Expected_Value);
          }
       
      
@@ -34,6 +41,7 @@ public class TestNG
          {
     	  Login_User loginobj= new Login_User();
     	  loginobj.login();
+    	  
          }
 		
 	  @AfterTest(alwaysRun = true) 
