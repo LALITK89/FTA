@@ -14,6 +14,6 @@ public class Launch_Browser
       //Utilityclass.driver.manage().timeouts().implicitlyWait(20000, TimeUnit.SECONDS);
       Utilityclass.url(Utilityclass.propobj.getProperty("application.url"));
       //Utilityclass.driver.manage().timeouts().implicitlyWait(20000, TimeUnit.SECONDS);
-      System.out.println("hello");
+
      }
 }

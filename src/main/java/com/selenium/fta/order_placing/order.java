@@ -94,7 +94,7 @@ public void products() throws InterruptedException
     Utilityclass.inputmethod(CardholderName, "Test");
     Utilityclass.inputmethod(card_number, "4263982640269299");
     Utilityclass.inputmethod(card_code, "837");
-    Thread.sleep(5000);
+    Thread.sleep(2000);
     Utilityclass.scrollpage(continue_btn4);
     Utilityclass.clickmethod(continue_btn4);
     Thread.sleep(2000);
