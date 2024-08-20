@@ -6,7 +6,8 @@
       <class name="com.selenium.fta.TestNG.TestNG">
         <methods>
           <include name="launch_browsers"/>
-          <include name="placing_order"/>
+          <include name="signupuser"/>
+          <include name="Logout_User"/>
         </methods>
       </class> <!-- com.selenium.fta.TestNG.TestNG -->
     </classes>
