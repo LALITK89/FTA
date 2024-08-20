@@ -54,6 +54,9 @@ public void signupuser()
 		Utilityclass.inputmethod(password_In,"Welcome@123");
 		Utilityclass.inputmethod(confirm_Password,"Welcome@123");
 		Utilityclass.clickmethod(register_btn);
+		
+		
+		
 	}
 }
 	
