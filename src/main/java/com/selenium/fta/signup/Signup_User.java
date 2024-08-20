@@ -2,12 +2,11 @@ package com.selenium.fta.signup;
 
 import java.time.Duration;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.selenium.fta.utility.Utilityclass;
+
 
 public class Signup_User 
 {
@@ -36,8 +35,11 @@ public class Signup_User
 	static private WebElement register_btn;
 	
 	@FindBy(id ="btnSignUpSubmit-content")
-	static private WebElement submt_btn;	
-    
+	static private WebElement submt_btn;
+	
+	@FindBy(id ="/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[1]/div/ul/li\r\n")
+	static private WebElement Varify_msg;
+
 public void signupuser()
 {
 	    PageFactory.initElements(Utilityclass.driver, Signup_User.class);
@@ -46,11 +48,12 @@ public void signupuser()
  	    Utilityclass.clickmethod(Gender);
  	    Utilityclass.inputmethod(first_name,"Lalit");
 		Utilityclass.inputmethod(last_name,"Kumar");
-		Utilityclass.inputmethod(Email_id,"testing@gmail.com");
-		//String EmailID = Utilityclass.driver.findElement(By.id("Email_id"));
+		//Utilityclass.inputmethod(Email_id,"testing@gmail.com");
+		Utilityclass.inputmethod(Email_id,"lalit.kumar@inveniolsi.com");
+		//String EmailID = Utilityclass.driver.findElement(By.id("Email")).getAttribute("value");
 		Utilityclass.inputmethod(password_In,"Welcome@123");
 		Utilityclass.inputmethod(confirm_Password,"Welcome@123");
 		Utilityclass.clickmethod(register_btn);
-	  }
+			  }
 }
 	

@@ -17,7 +17,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Utilityclass 
+public class Utilityclass
  {
 	public static Properties propobj =null;
 	public static WebDriver driver=null;

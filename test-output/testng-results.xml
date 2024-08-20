@@ -1,24 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-08T18:05:18 IST" name="Suite" finished-at="2024-08-08T18:05:27 IST" duration-ms="9078">
+  <suite started-at="2024-08-20T17:03:47 IST" name="Default suite" finished-at="2024-08-20T17:04:32 IST" duration-ms="45486">
     <groups>
       <group name="Regression">
-        <method signature="TestNG.signupuser()[pri:1, instance:com.selenium.fta.TestNG.TestNG@16150369]" name="signupuser" class="com.selenium.fta.TestNG.TestNG"/>
+        <method signature="TestNG.signupuser()[pri:1, instance:com.selenium.fta.TestNG.TestNG@508dec2b]" name="signupuser" class="com.selenium.fta.TestNG.TestNG"/>
+        <method signature="TestNG.loginUser()[pri:2, instance:com.selenium.fta.TestNG.TestNG@508dec2b]" name="loginUser" class="com.selenium.fta.TestNG.TestNG"/>
+        <method signature="TestNG.placing_order()[pri:3, instance:com.selenium.fta.TestNG.TestNG@508dec2b]" name="placing_order" class="com.selenium.fta.TestNG.TestNG"/>
       </group> <!-- Regression -->
     </groups>
-    <test started-at="2024-08-08T18:05:18 IST" name="Test" finished-at="2024-08-08T18:05:27 IST" duration-ms="9078">
+    <test started-at="2024-08-20T17:03:47 IST" name="Default test" finished-at="2024-08-20T17:04:32 IST" duration-ms="45486">
       <class name="com.selenium.fta.TestNG.TestNG">
-        <test-method is-config="true" signature="launch_browsers()[pri:0, instance:com.selenium.fta.TestNG.TestNG@16150369]" started-at="2024-08-08T18:05:18 IST" name="launch_browsers" finished-at="2024-08-08T18:05:25 IST" duration-ms="7144" status="PASS">
+        <test-method is-config="true" signature="launch_browsers()[pri:0, instance:com.selenium.fta.TestNG.TestNG@508dec2b]" started-at="2024-08-20T17:03:47 IST" name="launch_browsers" finished-at="2024-08-20T17:03:56 IST" duration-ms="9769" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launch_browsers -->
-        <test-method signature="signupuser()[pri:1, instance:com.selenium.fta.TestNG.TestNG@16150369]" started-at="2024-08-08T18:05:25 IST" name="signupuser" finished-at="2024-08-08T18:05:27 IST" duration-ms="1887" status="PASS">
+        <test-method signature="signupuser()[pri:1, instance:com.selenium.fta.TestNG.TestNG@508dec2b]" started-at="2024-08-20T17:03:56 IST" name="signupuser" finished-at="2024-08-20T17:03:59 IST" duration-ms="2701" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [0] but found [The specified email already exists]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [0] but found [The specified email already exists]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.selenium.fta.TestNG.TestNG.signupuser(TestNG.java:39)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signupuser -->
+        <test-method signature="loginUser()[pri:2, instance:com.selenium.fta.TestNG.TestNG@508dec2b]" started-at="2024-08-20T17:03:59 IST" name="loginUser" finished-at="2024-08-20T17:04:02 IST" duration-ms="2515" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginUser -->
+        <test-method signature="placing_order()[pri:3, instance:com.selenium.fta.TestNG.TestNG@508dec2b]" started-at="2024-08-20T17:04:02 IST" name="placing_order" finished-at="2024-08-20T17:04:31 IST" duration-ms="29368" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- placing_order -->
+        <test-method is-config="true" signature="Logout_User()[pri:0, instance:com.selenium.fta.TestNG.TestNG@508dec2b]" started-at="2024-08-20T17:04:31 IST" name="Logout_User" finished-at="2024-08-20T17:04:32 IST" duration-ms="1049" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout_User -->
       </class> <!-- com.selenium.fta.TestNG.TestNG -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
