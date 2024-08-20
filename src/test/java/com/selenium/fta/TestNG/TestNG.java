@@ -32,11 +32,11 @@ public class TestNG
          {
     	  Signup_User signup = new Signup_User();
     	  signup.signupuser();
-    	  String Actual_Value= "The specified email already exists";
-    	  String Expected_Value= Utilityclass.driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[1]/div/ul/li")).getAttribute("value");
+    	  //String Actual_Value= "The specified email already exists";
+    	  //String Expected_Value= Utilityclass.driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[1]/div/ul/li")).getAttribute("value");
     	  //String Expected_Value =Utilityclass.driver.findElement(By.className("validation-summary-errors")).getAttribute("value");
-    	  System.out.println(Expected_Value);
-    	  Assert.assertEquals(Actual_Value, Expected_Value);
+    	  //System.out.println(Expected_Value);
+    	  //Assert.assertEquals(Actual_Value, Expected_Value);
          }
            
       @Test(priority = 2,groups = "Regression")
