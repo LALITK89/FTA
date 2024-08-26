@@ -1,9 +1,12 @@
 package com.selenium.fta.order_placing;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.selenium.fta.TestData.TestData;
 import com.selenium.fta.utility.Utilityclass;
 
 public class order 
@@ -65,8 +68,11 @@ public class order
 	@FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div/div/div[2]/div/div[2]/input")
 	static private WebElement Continue_btn5;
 		
-public void products() throws InterruptedException
+public void products() throws InterruptedException, IOException
 {
+	//Utilityclass.configfile();
+//	String TCID = "TC001";
+//	TestData.GetactualScenarioData(TCID);
 	PageFactory.initElements(Utilityclass.driver, order.class);
     Utilityclass.mousehover(Computer_link);	
     Utilityclass.clickmethod(desktop_link);
@@ -91,9 +97,9 @@ public void products() throws InterruptedException
     Utilityclass.scrollpage(Continue_btn3);
     Utilityclass.clickmethod(Continue_btn3);
     Thread.sleep(2000);
-    Utilityclass.inputmethod(CardholderName, "Test");
-    Utilityclass.inputmethod(card_number, "4263982640269299");
-    Utilityclass.inputmethod(card_code, "837");
+    Utilityclass.inputmethod(CardholderName,"Test");
+    Utilityclass.inputmethod(card_number,"4012888888881881");
+    Utilityclass.inputmethod(card_code,"837");
     Thread.sleep(2000);
     Utilityclass.scrollpage(continue_btn4);
     Utilityclass.clickmethod(continue_btn4);

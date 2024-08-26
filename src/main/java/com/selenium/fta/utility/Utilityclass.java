@@ -1,10 +1,15 @@
 package com.selenium.fta.utility;
 
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
-
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -16,6 +21,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import com.jacob.com.LibraryLoader;
+import autoitx4java.AutoItX;
 
 public class Utilityclass
  {
@@ -182,9 +189,78 @@ public class Utilityclass
 	     }
 	 }
 	
-	public static void dynamicWait(WebElement web, Duration val)
+	public static void contestclick(WebElement we)
+	{
+		if(we.isDisplayed())
+		{
+			if(we.isEnabled())
+			{
+				Actions actobj = new Actions(driver);
+				actobj.contextClick(we).build().perform();		}
+		}
+	}
+	public static void draganddrop(WebElement Sourcelocator, WebElement Destinationlocator  )
+	{
+		Actions actobj = new Actions(driver);
+		actobj.dragAndDrop(Sourcelocator, Destinationlocator).build().perform();
+	}
+	
+	public static void driverWait(WebElement web, Duration val)
 	{
 		WebDriverWait wait = new WebDriverWait(Utilityclass.driver, val);
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("web")));
 	}
- }
+	
+	//browser file from the local system.
+		 public static void uploadfileAutoIT(String dialogTitle, String jcobDllPath, String pathFIleToUpload)
+		 {
+		 File file = new File(jcobDllPath);
+		 System.setProperty(LibraryLoader.JACOB_DLL_PATH, file.getAbsolutePath());
+		 AutoItX x = new AutoItX ();
+		 x.winActivate(dialogTitle);
+		 x.winWaitActive(dialogTitle);
+		 
+		 // To click on the Dialog pop ok button then you have to comment below line only
+		 x.ControlSetText(dialogTitle, "", "Edit1", pathFIleToUpload);
+		 x.controlClick(dialogTitle, "", "Button1");
+		 }
+		
+		 public static void fileoutput(String validation) throws IOException 
+		    {
+		        XSSFWorkbook workbook = new XSSFWorkbook();
+		        XSSFSheet sheet = workbook.createSheet("TestOutput");
+		         
+		        Object[][] bookData = {{validation},};
+		 
+		        int rowCount = 0;
+		         
+		        for (Object[] aBook : bookData) 
+		        {
+		            XSSFRow row = sheet.createRow(++rowCount);
+		             
+		            int columnCount = 0;
+		             
+		            for (Object field : aBook) 
+		            {
+		                Cell cell = row.createCell(++columnCount);
+		                if (field instanceof String) 
+		                {
+		                    cell.setCellValue((String) field);
+		                } 
+		                else if (field instanceof Integer) 
+		                {
+		                    cell.setCellValue((Integer) field);
+		                }
+		            }
+		             
+		        } 
+		         
+		        try (FileOutputStream outputStream = new FileOutputStream("\"D:\\FTA_Project\\Output\\Testoutput.xlsx\"")) {
+		            workbook.write(outputStream);
+		        
+		        }
+		    }   	
+	}
+
+
+
