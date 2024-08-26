@@ -4,13 +4,8 @@
   <artifactId>FTA890</artifactId>
   <version>0.0.1-SNAPSHOT</version>
    <name>Tosca</name>
-  <description>Tosca_Description</description>    
+  <description>Tosca_Description</description>
  <dependencies>
-           <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.0.0-M5</version>
-            </dependency>
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
@@ -67,11 +62,6 @@
     <groupId>org.apache.poi</groupId>
     <artifactId>poi-ooxml</artifactId>
     <version>5.3.0</version>
-</dependency>
-<dependency>
-    <groupId>de.openkeyword</groupId>
-    <artifactId>autoit</artifactId>
-    <version>0.2.44</version>
 </dependency>
     </dependencies>
 </project>
