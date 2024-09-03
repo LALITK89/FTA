@@ -6,7 +6,7 @@ public class Close_Browser
 {
 	public void Browserclose()
 	{
-	Utilityclass.driver.close();
+	   Utilityclass.driver.close();
 	
 	}
 }

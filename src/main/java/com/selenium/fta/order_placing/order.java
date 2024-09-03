@@ -98,8 +98,8 @@ public void products() throws InterruptedException, IOException
     Utilityclass.clickmethod(Continue_btn3);
     Thread.sleep(2000);
     Utilityclass.inputmethod(CardholderName,TestData.TDMap.get("Card_Name_ED"));
-    Utilityclass.inputmethod(card_number,"4012888888881881");
-    Utilityclass.inputmethod(card_code,"837");
+    Utilityclass.inputmethod(card_number,TestData.TDMap.get("Card_Number_ED"));
+    Utilityclass.inputmethod(card_code,TestData.TDMap.get("Card_CVV_ED"));
     Thread.sleep(2000);
     Utilityclass.scrollpage(continue_btn4);
     Utilityclass.clickmethod(continue_btn4);

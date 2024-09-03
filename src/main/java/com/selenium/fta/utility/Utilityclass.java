@@ -1,15 +1,12 @@
 package com.selenium.fta.utility;
 
-import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Iterator;
 import java.util.Properties;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import java.util.Set;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -28,6 +25,7 @@ public class Utilityclass
 	public static WebDriver driver=null;
 	public static WebDriver browser(String browsers)
 {
+		// To launch the browser
 	if(browsers.equalsIgnoreCase("ch"))
       {
 	     System.setProperty("webdriver.chrome.driver","chromedriver.exe");
@@ -46,7 +44,7 @@ public class Utilityclass
     }
 	return driver;
 }
-	
+	// To open the URL
 	public static void url(String val)
 	{
 	if(val.equalsIgnoreCase("S42"))
@@ -63,14 +61,15 @@ public class Utilityclass
 	}
 	}
 	
+	// To connect with Configuration property file
     public static void configfile() throws IOException
 	{
 		FileInputStream fis = new FileInputStream("Configuration//config.properties");
 		propobj =new Properties();
 		propobj.load(fis);
 	}
-	
-    public static void inputmethod(WebElement web, String val)
+    // To enter the value in field
+    public static void inputmethod(WebElement web,String val)
 	{
 		if(web.isDisplayed())
 		{
@@ -80,7 +79,7 @@ public class Utilityclass
 			}
 		}
 	}
-    
+    // To click on the object
     public static void clickmethod(WebElement web)
 	{
 		if(web.isDisplayed())
@@ -92,6 +91,7 @@ public class Utilityclass
 		}
 	}
     
+    // To mousehover on the object 
     public static void mousehover(WebElement web)
 	{
 		if(web.isDisplayed())
@@ -104,6 +104,7 @@ public class Utilityclass
 		}
 	}
     
+    // To select the value from drop down list by using indexing
     public static void selectbyindexing(WebElement web, int val)
 	{
 		if(web.isDisplayed())
@@ -115,7 +116,7 @@ public class Utilityclass
 			}
 		}
 	}
-    
+ // To select the value from drop down list by using visible text
     public static void selectbyvisibletext(WebElement web, String val)
 	{
 		if(web.isDisplayed())
@@ -127,7 +128,7 @@ public class Utilityclass
 			}
 		}
 	}
-    
+ // To select the value from drop down list by using value
     public static void selectbyvalue(WebElement web, String val)
 	{
 		if(web.isDisplayed())
@@ -139,7 +140,7 @@ public class Utilityclass
 			}
 		}
 	}
-    
+ // To de-select the value from drop down list by using indexing
 	public static void deselectbyindexing(WebElement web, int val)
 	{
 		if(web.isDisplayed())
@@ -151,7 +152,7 @@ public class Utilityclass
 			}
 		}
 	}
-	
+	// To de-select the value from drop down list by using visible text
 	public static void deselectbyvisibletext(WebElement web, String val)
 	{
 		if(web.isDisplayed())
@@ -163,6 +164,7 @@ public class Utilityclass
 			}
 		}
 	}
+	// To de-select the value from drop down list by using value
 	public static void deselectbyvalue(WebElement web, String val)
 	{
 		if(web.isDisplayed())
@@ -174,7 +176,7 @@ public class Utilityclass
 			}
 		}
 	}
-	
+	// To scroll the page till element.
 	public static void scrollpage(WebElement web)
 	{
 		if(web.isDisplayed())
@@ -187,6 +189,7 @@ public class Utilityclass
 	     }
 	 }
 	
+	// To right click on the element
 	public static void contestclick(WebElement we)
 	{
 		if(we.isDisplayed())
@@ -197,19 +200,51 @@ public class Utilityclass
 				actobj.contextClick(we).build().perform();		}
 		}
 	}
+	
+	// To drag and drop the element from one location to another location
 	public static void draganddrop(WebElement Sourcelocator, WebElement Destinationlocator  )
 	{
 		Actions actobj = new Actions(driver);
 		actobj.dragAndDrop(Sourcelocator, Destinationlocator).build().perform();
 	}
 	
+	// To dynamic wait
 	public static void driverWait(WebElement web, Duration val)
 	{
 		WebDriverWait wait = new WebDriverWait(Utilityclass.driver, val);
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("web")));
 	}
+	// To upload the attachment file
+	public static void uploadFile(WebElement web, String filePath)
+	{
+		if(web.isDisplayed())
+				{
+			if(web.isEnabled())
+					{
+				driver.findElement(By.linkText("Upload a Document:( .tex, .txt, .doc, .docx, .odt, .pdf, .rtf )"));
+				web.sendKeys(filePath);
+				driver.close();
+					}
+				}
+	  }
 	
-	
+	public static WebDriver switchbrowser(String windowTitle)
+	{
+		Set<String> handle = driver.getWindowHandles();
+		Iterator<String> ss = handle.iterator();
+		while(ss.hasNext())
+		{
+			String handleval =  ss.next();
+			WebDriver driver1 = driver.switchTo().window(handleval);
+			String title = driver1.getTitle();
+			if(title.equalsIgnoreCase(windowTitle))
+			{
+				return driver1;
+			}
+			//driver1.switchTo().defaultContent();
+		}
+		return driver;
+	}
 	}
 
 
