@@ -1,7 +1,5 @@
 package com.selenium.fta.login;
 
-import java.io.IOException;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -10,8 +8,8 @@ import com.selenium.fta.utility.Utilityclass;
 
 public class Login_User 
 {
-	@FindBy(xpath="/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a")
-	static private WebElement Login_link;
+	@FindBy(xpath="/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a") //It will provide the identifier refecnece to below webelement
+	static private WebElement Login_link; //It will use in same call only.
 	
 	@FindBy(id="Email")
 	static private WebElement Email_In;
@@ -26,18 +24,16 @@ public class Login_User
 	static private WebElement Login_btn;
 	
      
-	   public void login() throws IOException
+	   public void login() throws Exception
     	{
 		
     	String TCID = "TC001";
     	TestData.GetactualScenarioData(TCID);
-		PageFactory.initElements(Utilityclass.driver, Login_User.class);
+		PageFactory.initElements(Utilityclass.driver, Login_User.class);// To use the WebElement refrenece in test case use Pagefactory calss
 		Utilityclass.clickmethod(Login_link);
-        Utilityclass.inputmethod(Email_In,TestData.TDMap.get("User_Login_UserName_ED"));
+		Utilityclass.inputmethod(Email_In,TestData.TDMap.get("User_Login_UserName_ED"));
         Utilityclass.inputmethod(Password_In,TestData.TDMap.get("User_Login_Password_ED"));
-        Utilityclass.clickmethod(Remeber_Chk);
         Utilityclass.clickmethod(Login_btn);
-    }
-	
-
+        }
+	     
    }

@@ -1,38 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-26T22:20:18 IST" name="Suite" finished-at="2024-08-26T22:21:02 IST" duration-ms="43401">
+  <suite started-at="2024-09-02T14:47:17 IST" name="Default suite" finished-at="2024-09-02T14:47:32 IST" duration-ms="14803">
     <groups>
       <group name="Regression">
-        <method signature="TestNG.signupuser()[pri:1, instance:com.selenium.fta.TestNG.TestNG@2bdd8394]" name="signupuser" class="com.selenium.fta.TestNG.TestNG"/>
-        <method signature="TestNG.loginUser()[pri:2, instance:com.selenium.fta.TestNG.TestNG@2bdd8394]" name="loginUser" class="com.selenium.fta.TestNG.TestNG"/>
-        <method signature="TestNG.placing_order()[pri:3, instance:com.selenium.fta.TestNG.TestNG@2bdd8394]" name="placing_order" class="com.selenium.fta.TestNG.TestNG"/>
+        <method signature="TestNG.signupuser()[pri:1, instance:com.selenium.fta.TestNG.TestNG@5167f57d]" name="signupuser" class="com.selenium.fta.TestNG.TestNG"/>
       </group> <!-- Regression -->
     </groups>
-    <test started-at="2024-08-26T22:20:18 IST" name="Test" finished-at="2024-08-26T22:21:02 IST" duration-ms="43401">
+    <test started-at="2024-09-02T14:47:17 IST" name="Default test" finished-at="2024-09-02T14:47:32 IST" duration-ms="14803">
       <class name="com.selenium.fta.TestNG.TestNG">
-        <test-method is-config="true" signature="launch_browsers()[pri:0, instance:com.selenium.fta.TestNG.TestNG@2bdd8394]" started-at="2024-08-26T22:20:18 IST" name="launch_browsers" finished-at="2024-08-26T22:20:28 IST" duration-ms="10325" status="PASS">
+        <test-method is-config="true" signature="launch_browsers()[pri:0, instance:com.selenium.fta.TestNG.TestNG@5167f57d]" started-at="2024-09-02T14:47:17 IST" name="launch_browsers" finished-at="2024-09-02T14:47:27 IST" duration-ms="10418" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launch_browsers -->
-        <test-method signature="signupuser()[pri:1, instance:com.selenium.fta.TestNG.TestNG@2bdd8394]" started-at="2024-08-26T22:20:29 IST" name="signupuser" finished-at="2024-08-26T22:20:34 IST" duration-ms="5551" status="PASS">
+        <test-method signature="signupuser()[pri:1, instance:com.selenium.fta.TestNG.TestNG@5167f57d]" started-at="2024-09-02T14:47:27 IST" name="signupuser" finished-at="2024-09-02T14:47:31 IST" duration-ms="3410" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signupuser -->
-        <test-method signature="loginUser()[pri:2, instance:com.selenium.fta.TestNG.TestNG@2bdd8394]" started-at="2024-08-26T22:20:34 IST" name="loginUser" finished-at="2024-08-26T22:20:36 IST" duration-ms="2092" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginUser -->
-        <test-method signature="placing_order()[pri:3, instance:com.selenium.fta.TestNG.TestNG@2bdd8394]" started-at="2024-08-26T22:20:36 IST" name="placing_order" finished-at="2024-08-26T22:21:00 IST" duration-ms="24065" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- placing_order -->
-        <test-method is-config="true" signature="Logout_User()[pri:0, instance:com.selenium.fta.TestNG.TestNG@2bdd8394]" started-at="2024-08-26T22:21:00 IST" name="Logout_User" finished-at="2024-08-26T22:21:02 IST" duration-ms="1265" status="PASS">
+        <test-method is-config="true" signature="Logout_User()[pri:0, instance:com.selenium.fta.TestNG.TestNG@5167f57d]" started-at="2024-09-02T14:47:31 IST" name="Logout_User" finished-at="2024-09-02T14:47:32 IST" duration-ms="878" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Logout_User -->
       </class> <!-- com.selenium.fta.TestNG.TestNG -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

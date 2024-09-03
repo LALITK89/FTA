@@ -1,12 +1,10 @@
 package com.selenium.fta.signup;
 
-import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.selenium.fta.TestData.TestData;
 import com.selenium.fta.utility.Utilityclass;
 
@@ -43,7 +41,7 @@ public class Signup_User
 	@FindBy(id ="/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[1]/div/ul/li\r\n")
 	static private WebElement Varify_msg;
 
-public void signupuser() throws IOException
+public void signupuser() throws Exception
 {
 	    String TCID = "TC001";
 	    TestData.GetactualScenarioData(TCID);
@@ -54,7 +52,6 @@ public void signupuser() throws IOException
  	    Utilityclass.inputmethod(first_name,TestData.TDMap.get("firstName_ED"));
 		Utilityclass.inputmethod(last_name,TestData.TDMap.get("LastName_ED"));
 		Utilityclass.inputmethod(Email_id,TestData.TDMap.get("Signup_emailid"));
-		//String EmailID = Utilityclass.driver.findElement(By.id("Email")).getAttribute("value");
 		Utilityclass.inputmethod(password_In,TestData.TDMap.get("Password_ED"));
 		Utilityclass.inputmethod(confirm_Password,TestData.TDMap.get("Conf_Password_ED"));
 		Utilityclass.clickmethod(register_btn);
