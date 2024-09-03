@@ -105,7 +105,7 @@ public class CreateWordDocument
  }
      public static void main(String [] args) throws Exception
     {
-	//documentCreation("TC001");
+	documentCreation("TC001");
     CaptureScreenshotAndDescrptionInsertIntoWordDocument("Description is here");
     printResult("Your execution have completed and Passed");
     
