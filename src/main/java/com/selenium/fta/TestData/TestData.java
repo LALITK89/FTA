@@ -59,8 +59,8 @@ public static int getdesirerownum(String TCID) throws IOException //This method 
 			getWorkBookIbj();  //To activate workbook
 			getworksheet();   //To activate worksheet
 			int rowcnt = getrowcount();  //Return Row count
-			int colcnt = columncnt(); ////Return Column count
-			for(int i=1;i<=rowcnt;i++) //This loop will work till total row count.
+			int colcnt = columncnt();   //Return Column count
+			for(int i=1;i<=rowcnt;i++)  //This loop will work till total row count.
 			{
 				for(int j=1;j<=colcnt;j++) //This loop work till total column count.
 				{
@@ -96,14 +96,17 @@ public static int getdesirerownum(String TCID) throws IOException //This method 
 		Cell cellobj = rowobj.getCell(j, MissingCellPolicy.CREATE_NULL_AS_BLANK);  // To reach the particular Cell.
 		String KeyName =cellobj.getStringCellValue();  // To fetch the Cell data in key name variable.
 		Cell cellobj1 = rowobj.getCell(j+1, MissingCellPolicy.CREATE_NULL_AS_BLANK); // To reach the particular Cell.
+			
 		String KeyValue;
 		if(cellobj1.getCellType() == CellType.NUMERIC) // If any cell having the numeric value then it will convert in string format
 		{
-		    KeyValue = NumberToTextConverter.toText(cellobj1.getNumericCellValue()); //
+		    KeyValue = NumberToTextConverter.toText(cellobj1.getNumericCellValue()); //To fetch the Cell data in key name variable.
+		 
 		}
 		else
 		{
 			KeyValue = cellobj1.getStringCellValue(); // To fetch the Cell data in key value variable.
+		
 		}
 		TDMap.put(KeyName, KeyValue);
 		j=j+1; // will add +1 in J to fetch the next value data, because dats is stored in Key value form.
