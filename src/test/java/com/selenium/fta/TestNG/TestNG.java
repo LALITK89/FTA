@@ -7,8 +7,6 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-import com.selenium.fta.Change_Password.ChangePassword;
 import com.selenium.fta.browser.Close_Browser;
 import com.selenium.fta.browser.Launch_Browser;
 import com.selenium.fta.login.Login_User;
