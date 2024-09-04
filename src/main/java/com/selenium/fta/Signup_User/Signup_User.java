@@ -44,9 +44,6 @@ public class Signup_User
 
 public void signupuser() throws Exception
 {
-	    String TCID = "TC001";
-	    TestData.GetactualScenarioData(TCID);
-	    CreateWordDocument.documentCreation(TCID);
 	    PageFactory.initElements(Utilityclass.driver, Signup_User.class);
  	    Utilityclass.clickmethod(signup_btn);
  	    CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Click on the Signup link");
