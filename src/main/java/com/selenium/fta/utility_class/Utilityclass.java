@@ -209,10 +209,10 @@ public class Utilityclass
 	}
 	
 	// To dynamic wait
-	public static void driverWait(WebElement web, Duration val)
+	public static void driverWait(WebElement web, int val)
 	{
-		WebDriverWait wait = new WebDriverWait(Utilityclass.driver, val);
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("web")));
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(val));
+		wait.until(ExpectedConditions.elementToBeClickable(web));
 	}
 	// To upload the attachment file
 	public static void uploadFile(WebElement web, String filePath)
