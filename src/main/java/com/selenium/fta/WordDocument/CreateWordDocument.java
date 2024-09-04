@@ -21,8 +21,9 @@ import org.apache.poi.xwpf.usermodel.XWPFRun;
 
 public class CreateWordDocument 
 {
-    public static String documentPath= null;
-   public static String documentCreation(String TCID) throws IOException
+   
+public static String documentPath = null;
+public static String documentCreation(String TCID) throws IOException
 {
 	// Create a Word document
 	 try (XWPFDocument document = new XWPFDocument()) 
@@ -30,7 +31,7 @@ public class CreateWordDocument
 	
 	// Save the document
         String DocumentFolder = "D:\\OneDrive - Invenio Business Solutions Pvt. Ltd\\Desktop\\TPD\\";
-        String documentPath = DocumentFolder+TCID+".docx";
+        documentPath = DocumentFolder+TCID+".docx";
 	    FileOutputStream fos = new FileOutputStream(documentPath);
 	    document.write(fos);
 	    fos.close();
@@ -41,11 +42,12 @@ public class CreateWordDocument
          }
 	 return documentPath;
    }
+
  public static String CaptureScreenshotAndDescrptionInsertIntoWordDocument(String ScreenshotDescription) throws IOException, HeadlessException, AWTException, InvalidFormatException
     {
-    	// Path to the Word document
+    	// Path to the Word documen
+        //String DocumentPath = documentPath;
         String DocumentPath = "D:\\OneDrive - Invenio Business Solutions Pvt. Ltd\\Desktop\\TPD\\TC001.docx";
-        
         // Load the existing Word document
         FileInputStream fis = new FileInputStream(DocumentPath);
         XWPFDocument doc = new XWPFDocument(fis);
@@ -86,6 +88,7 @@ public class CreateWordDocument
  public static void printResult(String Result) throws IOException
  {
 	// Path to the Word document
+     //String DocumentPath = documentPath;
      String DocumentPath = "D:\\OneDrive - Invenio Business Solutions Pvt. Ltd\\Desktop\\TPD\\TC001.docx";
      
 	// Load the existing Word document
@@ -105,9 +108,9 @@ public class CreateWordDocument
  }
      public static void main(String [] args) throws Exception
     {
-	documentCreation("TC001");
-    CaptureScreenshotAndDescrptionInsertIntoWordDocument("Description is here");
-    printResult("Your execution have completed and Passed");
+  	documentCreation("TC001");
+	CaptureScreenshotAndDescrptionInsertIntoWordDocument("Description is here");
+    printResult("Execution Status: Passed");
     
     }
 }

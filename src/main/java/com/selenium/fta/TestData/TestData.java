@@ -100,7 +100,7 @@ public static int getdesirerownum(String TCID) throws IOException //This method 
 		String KeyValue;
 		if(cellobj1.getCellType() == CellType.NUMERIC) // If any cell having the numeric value then it will convert in string format
 		{
-		    KeyValue = NumberToTextConverter.toText(cellobj1.getNumericCellValue()); //To fetch the Cell data in key name variable.
+		    KeyValue = NumberToTextConverter.toText(cellobj1.getNumericCellValue()); // If any cell having the numeric value then it will convert in string format
 		 
 		}
 		else
