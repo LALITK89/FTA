@@ -1,12 +1,16 @@
 package com.selenium.fta.order_placing;
 
+import java.awt.AWTException;
+import java.awt.HeadlessException;
 import java.io.IOException;
 
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.selenium.fta.TestData.TestData;
+import com.selenium.fta.WordDocument.CreateWordDocument;
 import com.selenium.fta.utility_class.Utilityclass;
 
 public class order 
@@ -68,47 +72,55 @@ public class order
 	@FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div/div/div[2]/div/div[2]/input")
 	static private WebElement Continue_btn5;
 		
-public void products() throws InterruptedException, IOException
+public void products() throws InterruptedException, IOException, HeadlessException, InvalidFormatException, AWTException
 {
-	//Utilityclass.configfile();
-//	String TCID = "TC001";
-//	TestData.GetactualScenarioData(TCID);
+	//String TCID = "TC001";
+	//TestData.GetactualScenarioData(TCID);
 	PageFactory.initElements(Utilityclass.driver, order.class);
-    Utilityclass.mousehover(Computer_link);	
+    Utilityclass.mousehover(Computer_link);
+    CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Mouse hover on the Computer Menu");
     Utilityclass.clickmethod(desktop_link);
+    CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Open the desktop menu");
     Utilityclass.clickmethod(AddToCard_btn);
+    CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Add the product in the cart");
     Utilityclass.clickmethod(cart_btn);
     Utilityclass.clickmethod(shopping_cart);
+    CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Open the shopping cart");
     Utilityclass.clickmethod(terms_chk);
+    CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Click on the checkout button");
     Utilityclass.scrollpage(checkout_btn);
     Utilityclass.clickmethod(checkout_btn);
+    CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Click on the continue button");
     Utilityclass.scrollpage(Continue_btn);
     Utilityclass.clickmethod(Continue_btn);
-    Thread.sleep(2000);
+    Utilityclass.driverWait(Continue_btn1,100);
     Utilityclass.scrollpage(Continue_btn1);
     Utilityclass.clickmethod(Continue_btn1);
-    Thread.sleep(2000);
+    Utilityclass.driverWait(Continue_btn2,100);
     Utilityclass.scrollpage(Continue_btn2);
     Utilityclass.clickmethod(Continue_btn2);
-    Thread.sleep(2000);
+    Utilityclass.driverWait(Card_details,100);
     Utilityclass.scrollpage(Card_details);
     Utilityclass.clickmethod(Card_details);
-    Thread.sleep(2000);
+    Utilityclass.driverWait(Continue_btn3,100);
     Utilityclass.scrollpage(Continue_btn3);
     Utilityclass.clickmethod(Continue_btn3);
-    Thread.sleep(2000);
+    Utilityclass.driverWait(CardholderName,100);
     Utilityclass.inputmethod(CardholderName,TestData.TDMap.get("Card_Name_ED"));
     Utilityclass.inputmethod(card_number,TestData.TDMap.get("Card_Number_ED"));
     Utilityclass.inputmethod(card_code,TestData.TDMap.get("Card_CVV_ED"));
-    Thread.sleep(2000);
+    CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Enter the card details");
+    Utilityclass.driverWait(continue_btn4,100);
     Utilityclass.scrollpage(continue_btn4);
     Utilityclass.clickmethod(continue_btn4);
-    Thread.sleep(2000);
+    Utilityclass.driverWait(confirm_btn,100);
     Utilityclass.scrollpage(confirm_btn);
     Utilityclass.clickmethod(confirm_btn);
-    Thread.sleep(2000);
+    CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Check the order details");
+    Utilityclass.driverWait(order_details,100);
     Utilityclass.scrollpage(order_details);
     Utilityclass.clickmethod(order_details);
+    CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Check the order listing");
 }
 
 }
