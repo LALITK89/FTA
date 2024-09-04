@@ -35,6 +35,10 @@ public static void getworksheet()
 		{
 	  
 			sheetobj = Wbook.getSheet("TestData");
+			if (sheetobj == null) 
+			{
+	            throw new IllegalArgumentException("Sheet 'TestData' not found.");
+	        }
 		}
 
 //To Get Row Count
@@ -96,21 +100,20 @@ public static int getdesirerownum(String TCID) throws IOException //This method 
 		Cell cellobj = rowobj.getCell(j, MissingCellPolicy.CREATE_NULL_AS_BLANK);  // To reach the particular Cell.
 		String KeyName =cellobj.getStringCellValue();  // To fetch the Cell data in key name variable.
 		Cell cellobj1 = rowobj.getCell(j+1, MissingCellPolicy.CREATE_NULL_AS_BLANK); // To reach the particular Cell.
-			
-		String KeyValue;
+		
 		if(cellobj1.getCellType() == CellType.NUMERIC) // If any cell having the numeric value then it will convert in string format
 		{
-		    KeyValue = NumberToTextConverter.toText(cellobj1.getNumericCellValue()); // If any cell having the numeric value then it will convert in string format
-		 
+			
+		    String KeyValue = NumberToTextConverter.toText(cellobj1.getNumericCellValue()); // If any cell having the numeric value then it will convert in string format
+		    TDMap.put(KeyName, KeyValue);
+			j=j+1;
 		}
 		else
 		{
-			KeyValue = cellobj1.getStringCellValue(); // To fetch the Cell data in key value variable.
-		
+			String KeyValue = cellobj1.getStringCellValue(); // To fetch the Cell data in key value variable.
+			TDMap.put(KeyName, KeyValue); // will add +1 in J to fetch the next value data, because data is stored in Key value form.
+			j=j+1;
 		}
-		TDMap.put(KeyName, KeyValue);
-		j=j+1; // will add +1 in J to fetch the next value data, because dats is stored in Key value form.
-	}
-}
-
+     }
+  }
 }

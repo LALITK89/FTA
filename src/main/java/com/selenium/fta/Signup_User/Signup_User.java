@@ -1,4 +1,4 @@
-package com.selenium.fta.signup;
+package com.selenium.fta.Signup_User;
 
 import java.time.Duration;
 
@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.selenium.fta.TestData.TestData;
-import com.selenium.fta.utility.Utilityclass;
+import com.selenium.fta.utility_class.Utilityclass;
 
 
 public class Signup_User 

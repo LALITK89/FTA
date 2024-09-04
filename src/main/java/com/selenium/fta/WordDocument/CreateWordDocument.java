@@ -45,9 +45,9 @@ public static String documentCreation(String TCID) throws IOException
 
  public static String CaptureScreenshotAndDescrptionInsertIntoWordDocument(String ScreenshotDescription) throws IOException, HeadlessException, AWTException, InvalidFormatException
     {
-    	// Path to the Word documen
-        //String DocumentPath = documentPath;
-        String DocumentPath = "D:\\OneDrive - Invenio Business Solutions Pvt. Ltd\\Desktop\\TPD\\TC001.docx";
+    	// Path to the Word document
+           String DocumentPath = documentPath;
+        //String DocumentPath = "D:\\OneDrive - Invenio Business Solutions Pvt. Ltd\\Desktop\\TPD\\TC001.docx";
         // Load the existing Word document
         FileInputStream fis = new FileInputStream(DocumentPath);
         XWPFDocument doc = new XWPFDocument(fis);
@@ -74,7 +74,9 @@ public static String documentCreation(String TCID) throws IOException
         try (FileOutputStream fos = new FileOutputStream(DocumentPath)) 
         {
             doc.write(fos);
-        } catch (Exception e) {
+        } 
+        catch (Exception e) 
+        {
             e.printStackTrace();
         } finally {
             fis.close();
@@ -88,8 +90,8 @@ public static String documentCreation(String TCID) throws IOException
  public static void printResult(String Result) throws IOException
  {
 	// Path to the Word document
-     //String DocumentPath = documentPath;
-     String DocumentPath = "D:\\OneDrive - Invenio Business Solutions Pvt. Ltd\\Desktop\\TPD\\TC001.docx";
+       String DocumentPath = documentPath;
+     //String DocumentPath = "D:\\OneDrive - Invenio Business Solutions Pvt. Ltd\\Desktop\\TPD\\TC001.docx";
      
 	// Load the existing Word document
      FileInputStream fis = new FileInputStream(DocumentPath);
@@ -109,7 +111,7 @@ public static String documentCreation(String TCID) throws IOException
      public static void main(String [] args) throws Exception
     {
   	documentCreation("TC001");
-	CaptureScreenshotAndDescrptionInsertIntoWordDocument("Description is here");
+    CaptureScreenshotAndDescrptionInsertIntoWordDocument("Description is here");
     printResult("Execution Status: Passed");
     
     }

@@ -1,4 +1,4 @@
-package com.selenium.fta.utility;
+package com.selenium.fta.utility_class;
 
 import java.io.FileInputStream;
 import java.io.IOException;
