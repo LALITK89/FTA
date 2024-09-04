@@ -17,6 +17,8 @@ import com.selenium.fta.Clear_Cache.ClearCache;
 import com.selenium.fta.Login_User.Login_User;
 import com.selenium.fta.Logout_User.logout;
 import com.selenium.fta.Signup_User.Signup_User;
+import com.selenium.fta.TestData.TestData;
+import com.selenium.fta.WordDocument.CreateWordDocument;
 import com.selenium.fta.order_placing.order;
 import com.selenium.fta.utility_class.Utilityclass;
 
@@ -28,14 +30,16 @@ public class TestNG
      public void launch_browsers() throws InterruptedException, IOException, AWTException
          {
     	  ClearCache.DeleteCookiesAndData();
-    	  Thread.sleep(10000);
+    	  Thread.sleep(5000);
     	  Launch_Browser browser =new Launch_Browser();
     	  browser.Launchbrowser();
          }
       @Test(priority = 1,groups = "Regression")
       public void signupuser() throws Exception
          {
-    	     	  
+    	  String TCID = "TC001";
+  	      TestData.GetactualScenarioData(TCID);
+  	      CreateWordDocument.documentCreation(TCID);   	  
     	  Signup_User signup = new Signup_User();
     	  signup.signupuser();
     	  String Actual_Value= "The specified email already exists";

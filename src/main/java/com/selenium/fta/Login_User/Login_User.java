@@ -25,11 +25,8 @@ public class Login_User
 	static private WebElement Login_btn;
 	
      
-	   public void login() throws Exception
-    	{
-		
-    	//String TCID = "TC001";
-    	//TestData.GetactualScenarioData(TCID);
+	public void login() throws Exception
+      {
 		PageFactory.initElements(Utilityclass.driver, Login_User.class);// To use the WebElement refrenece in test case use Pagefactory calss
 		Utilityclass.clickmethod(Login_link);
 		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Open the Login Link");
@@ -41,4 +38,4 @@ public class Login_User
         CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Click on the login button to login the user");
         }
 	     
-   }
+ }
