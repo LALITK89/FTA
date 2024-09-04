@@ -1,7 +1,7 @@
-package com.selenium.fta.browser;
+package com.selenium.fta.Browser_Launching;
 import java.io.IOException;
 
-import com.selenium.fta.utility.Utilityclass;
+import com.selenium.fta.utility_class.Utilityclass;
 
 public class Launch_Browser 
 {

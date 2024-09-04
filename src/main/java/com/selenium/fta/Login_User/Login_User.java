@@ -1,10 +1,10 @@
-package com.selenium.fta.login;
+package com.selenium.fta.Login_User;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.selenium.fta.TestData.TestData;
-import com.selenium.fta.utility.Utilityclass;
+import com.selenium.fta.utility_class.Utilityclass;
 
 public class Login_User 
 {

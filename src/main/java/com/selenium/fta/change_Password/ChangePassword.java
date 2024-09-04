@@ -1,11 +1,11 @@
-package com.selenium.fta.Change_Password;
+package com.selenium.fta.change_Password;
 
 import java.io.IOException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.selenium.fta.TestData.TestData;
-import com.selenium.fta.utility.Utilityclass;
+import com.selenium.fta.utility_class.Utilityclass;
 
 public class ChangePassword
 {

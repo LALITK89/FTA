@@ -1,9 +1,10 @@
-package com.selenium.fta.logout;
+package com.selenium.fta.Logout_User;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import com.selenium.fta.utility.Utilityclass;
+
+import com.selenium.fta.utility_class.Utilityclass;
 
 public class logout 
 {

@@ -7,13 +7,13 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import com.selenium.fta.browser.Close_Browser;
-import com.selenium.fta.browser.Launch_Browser;
-import com.selenium.fta.login.Login_User;
-import com.selenium.fta.logout.logout;
+import com.selenium.fta.Browser_Launching.Close_Browser;
+import com.selenium.fta.Browser_Launching.Launch_Browser;
+import com.selenium.fta.Login_User.Login_User;
+import com.selenium.fta.Logout_User.logout;
+import com.selenium.fta.Signup_User.Signup_User;
 import com.selenium.fta.order_placing.order;
-import com.selenium.fta.signup.Signup_User;
-import com.selenium.fta.utility.Utilityclass;
+import com.selenium.fta.utility_class.Utilityclass;
 
 
 public class TestNG 
