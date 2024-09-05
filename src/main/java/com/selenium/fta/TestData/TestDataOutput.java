@@ -1,6 +1,9 @@
 package com.selenium.fta.TestData;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import com.selenium.fta.utility_class.Utilityclass;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -18,11 +21,12 @@ public class TestDataOutput
         try 
         {
             // Open the existing Excel file
-            fis = new FileInputStream("D:\\FTA_Project\\Output\\Testoutput.xlsx");
+        	Utilityclass.configfile();
+            fis = new FileInputStream(Utilityclass.propobj.getProperty("TestData.Outputfile"));
             workbook = new XSSFWorkbook(fis);
 
             // Access the desired sheet (by name or index)
-            Sheet sheet = workbook.getSheet("TestOutput");
+            Sheet sheet = workbook.getSheet(Utilityclass.propobj.getProperty("OutputTestData.SheetName"));
             if (sheet == null) 
             {
                 sheet = workbook.createSheet("LatestTestOutput");
@@ -54,7 +58,7 @@ public class TestDataOutput
             }
 
             // Write the changes to the file
-            fos = new FileOutputStream("D:\\FTA_Project\\Output\\Testoutput.xlsx");
+            fos = new FileOutputStream(Utilityclass.propobj.getProperty("TestData.Outputfile"));
             workbook.write(fos);
 
         } 
@@ -79,6 +83,6 @@ public class TestDataOutput
 
     public static void main(String[] args) 
     {
-        UpdateTestDateInExcel("TC001", "Verification success messages", "Passed", "104327369934");
+        UpdateTestDateInExcel("TC002", "Verification success messages", "Passed", "104327369934");
     }
 }
