@@ -19,6 +19,8 @@ import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.usermodel.XWPFRun;
 
+import com.selenium.fta.utility_class.Utilityclass;
+
 public class CreateWordDocument 
 {
    
@@ -30,9 +32,10 @@ public static String documentCreation(String TCID) throws IOException
 	    {
 	
 	// Save the document
-        String DocumentFolder = "D:\\OneDrive - Invenio Business Solutions Pvt. Ltd\\Desktop\\TPD\\";
+		Utilityclass.configfile();
+        String DocumentFolder = Utilityclass.propobj.getProperty("TPD.url");
         documentPath = DocumentFolder+TCID+".docx";
-	    FileOutputStream fos = new FileOutputStream(documentPath);
+	    FileOutputStream fos = new FileOutputStream(documentPath);;
 	    document.write(fos);
 	    fos.close();
 	    }
@@ -107,12 +110,6 @@ public static String documentCreation(String TCID) throws IOException
     	 {
              doc.write(fos);
      }
- }
-     public static void main(String [] args) throws Exception
-    {
-  	documentCreation("TC001");
-    CaptureScreenshotAndDescrptionInsertIntoWordDocument("Description is here");
-    printResult("Execution Status: Passed");
-    
-    }
+  }
+ 
 }
