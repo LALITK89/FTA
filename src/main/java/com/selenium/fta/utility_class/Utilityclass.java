@@ -214,6 +214,7 @@ public class Utilityclass
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(val));
 		wait.until(ExpectedConditions.elementToBeClickable(web));
 	}
+	
 	// To upload the attachment file
 	public static void uploadFile(WebElement web, String filePath)
 	{
@@ -227,7 +228,7 @@ public class Utilityclass
 					}
 				}
 	  }
-	
+	// To switch on the window
 	public static WebDriver switchbrowser(String windowTitle)
 	{
 		Set<String> handle = driver.getWindowHandles();

@@ -25,11 +25,11 @@ public static void DeleteCookiesAndData() throws IOException, InterruptedExcepti
          // Check the exit code
             if (exitCode == 0) 
             {
-             System.out.println("Batch file executed successfully."); 
+             System.out.println("Clear Cache batch file executed successfully."); 
             } 
             else 
             {
-             System.out.println("Batch file execution failed with exit code: " + exitCode);
+             System.out.println("Clear Cache batch file execution failed with exit code: " + exitCode);
             }
       } 
 	 catch (IOException e) 
@@ -43,7 +43,7 @@ public static void DeleteCookiesAndData() throws IOException, InterruptedExcepti
               }
         }
 
-public static void main(String args[]) throws IOException, InterruptedException, AWTException
+     public static void main(String args[]) throws IOException, InterruptedException, AWTException
 	        {
 	        DeleteCookiesAndData();
 	        }
