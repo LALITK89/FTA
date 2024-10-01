@@ -1,7 +1,5 @@
 package com.selenium.fta.Signup_User;
 
-import java.time.Duration;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;

@@ -50,7 +50,7 @@ public static String documentCreation(String TCID) throws IOException
     {
     	// Path to the Word document
            String DocumentPath = documentPath;
-        //String DocumentPath = "D:\\OneDrive - Invenio Business Solutions Pvt. Ltd\\Desktop\\TPD\\TC001.docx";
+        
         // Load the existing Word document
         FileInputStream fis = new FileInputStream(DocumentPath);
         XWPFDocument doc = new XWPFDocument(fis);
@@ -94,8 +94,7 @@ public static String documentCreation(String TCID) throws IOException
  {
 	// Path to the Word document
        String DocumentPath = documentPath;
-     //String DocumentPath = "D:\\OneDrive - Invenio Business Solutions Pvt. Ltd\\Desktop\\TPD\\TC001.docx";
-     
+         
 	// Load the existing Word document
      FileInputStream fis = new FileInputStream(DocumentPath);
      XWPFDocument doc = new XWPFDocument(fis);
