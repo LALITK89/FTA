@@ -1,16 +1,15 @@
 package com.selenium.fta.Clear_Cache;
 
 import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 public class ClearCache 
 {
-public static void DeleteCookiesAndData() throws IOException, InterruptedException, AWTException
-{
+	//To clear the browser Cookies cache And Data
+  public static void DeleteCookiesAndData() throws IOException, InterruptedException, AWTException
+   {
 	 try 
-	 {
+	  {
           //Get the project path
 		    String directoryPath = System.getProperty("user.dir"); 
 		    String batchFilePath = directoryPath+ "\\Files\\"; 

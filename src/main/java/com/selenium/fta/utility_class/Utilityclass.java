@@ -6,7 +6,6 @@ import java.time.Duration;
 import java.util.Iterator;
 import java.util.Properties;
 import java.util.Set;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -23,9 +22,11 @@ public class Utilityclass
  {
 	public static Properties propobj =null;
 	public static WebDriver driver=null;
+	
+	// To launch the browser
 	public static WebDriver browser(String browsers)
 {
-		// To launch the browser
+	
 	if(browsers.equalsIgnoreCase("ch"))
       {
 	     System.setProperty("webdriver.chrome.driver","chromedriver.exe");
@@ -61,13 +62,15 @@ public class Utilityclass
 	}
 	}
 	
-	// To connect with Configuration property file
+	// To take the input from Configuration file
     public static void configfile() throws IOException
 	{
 		FileInputStream fis = new FileInputStream("Configuration//config.properties");
 		propobj =new Properties();
 		propobj.load(fis);
 	}
+    
+    
     // To enter the value in field
     public static void inputmethod(WebElement web,String val)
 	{
@@ -79,7 +82,8 @@ public class Utilityclass
 			}
 		}
 	}
-    // To click on the object
+    
+    // To click on the element
     public static void clickmethod(WebElement web)
 	{
 		if(web.isDisplayed())
@@ -91,7 +95,7 @@ public class Utilityclass
 		}
 	}
     
-    // To mousehover on the object 
+    // To mousehover on the element 
     public static void mousehover(WebElement web)
 	{
 		if(web.isDisplayed())
@@ -190,19 +194,19 @@ public class Utilityclass
 	 }
 	
 	// To right click on the element
-	public static void contestclick(WebElement we)
+	public static void contextClick(WebElement web)
 	{
-		if(we.isDisplayed())
+		if(web.isDisplayed())
 		{
-			if(we.isEnabled())
+			if(web.isEnabled())
 			{
 				Actions actobj = new Actions(driver);
-				actobj.contextClick(we).build().perform();		}
+				actobj.contextClick(web).build().perform();		}
 		}
 	}
 	
 	// To drag and drop the element from one location to another location
-	public static void draganddrop(WebElement Sourcelocator, WebElement Destinationlocator  )
+	public static void draganddrop(WebElement Sourcelocator, WebElement Destinationlocator)
 	{
 		Actions actobj = new Actions(driver);
 		actobj.dragAndDrop(Sourcelocator, Destinationlocator).build().perform();
@@ -214,6 +218,7 @@ public class Utilityclass
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(val));
 		wait.until(ExpectedConditions.elementToBeClickable(web));
 	}
+	
 	
 	// To upload the attachment file
 	public static void uploadFile(WebElement web, String filePath)
@@ -229,7 +234,7 @@ public class Utilityclass
 				}
 	  }
 	// To switch on the window
-	public static WebDriver switchbrowser(String windowTitle)
+	public static WebDriver switchTabs(String windowTitle)
 	{
 		Set<String> handle = driver.getWindowHandles();
 		Iterator<String> ss = handle.iterator();

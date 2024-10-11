@@ -11,7 +11,8 @@ import java.io.IOException;
 
 public class TestDataOutput 
 {
-	public static void UpdateTestDateInExcel(String TestCaseID, String Message, String Status, String FBN) 
+	// To insert your output test data in excel file
+	public static void updateTestDataInExcel(String TestCaseID, String Message, String Status, String FBN) 
 	
 	 {
         FileInputStream fis = null;
@@ -83,6 +84,6 @@ public class TestDataOutput
 
     public static void main(String[] args) 
     {
-        UpdateTestDateInExcel("TC002", "Verification success messages", "Passed", "104327369934");
+        updateTestDataInExcel("TC002", "Verification success messages", "Passed", "104327369934");
     }
 }
