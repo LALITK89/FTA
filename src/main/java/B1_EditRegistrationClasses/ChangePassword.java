@@ -1,11 +1,12 @@
-package com.selenium.fta.change_Password;
+package B1_EditRegistrationClasses;
 
 import java.io.IOException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import com.selenium.fta.TestData.TestData;
-import com.selenium.fta.utility_class.Utilityclass;
+
+import A_CommonUtilityClasses.TestData;
+import A_CommonUtilityClasses.Utilityclass;
 
 public class ChangePassword
 {
@@ -33,6 +34,7 @@ public class ChangePassword
 	 PageFactory.initElements(Utilityclass.driver,ChangePassword.class );
 	 Utilityclass.clickmethod(Login_link);
 	 Utilityclass.clickmethod(forgot_link);
+	 Utilityclass.mousehover(Login_link);
 	 Utilityclass.inputmethod(forgot_email, TestData.TDMap.get("User_Login_UserName_ED"));
 	 Utilityclass.clickmethod(Recovery_btn);
 	 String actual_message = success_msg.getText();

@@ -1,11 +1,13 @@
-package com.selenium.fta.Signup_User;
+package B_RegistrationClasses;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import com.selenium.fta.TestData.TestData;
-import com.selenium.fta.WordDocument.CreateWordDocument;
-import com.selenium.fta.utility_class.Utilityclass;
+
+import A_CommonUtilityClasses.CreateWordDocument;
+import A_CommonUtilityClasses.TestData;
+import A_CommonUtilityClasses.Utilityclass;
 
 
 public class Signup_User 
@@ -39,8 +41,9 @@ public class Signup_User
 	
 	@FindBy(id ="/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[1]/div/ul/li\r\n")
 	static private WebElement Varify_msg;
-
-public void signupuser() throws Exception
+	
+public static String value = null;	
+public String signupuser() throws Exception
 {
 	    PageFactory.initElements(Utilityclass.driver, Signup_User.class);
  	    Utilityclass.clickmethod(signup_btn);
@@ -56,6 +59,7 @@ public void signupuser() throws Exception
 		Utilityclass.driverWait(Email_id,100);
 		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Enter the last name");
 		Utilityclass.inputmethod(Email_id,TestData.TDMap.get("Signup_emailid"));
+		String value = Utilityclass.driver.findElement(By.id("Email")).getText();
 		Utilityclass.driverWait(password_In,100);
 		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Enter the signup email id");
 		Utilityclass.inputmethod(password_In,TestData.TDMap.get("Password_ED"));
@@ -66,6 +70,7 @@ public void signupuser() throws Exception
 		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Enter the Confirm password");
 		Utilityclass.clickmethod(register_btn);
 		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Click on the register button");
+		return value;
 	}
 }
 	

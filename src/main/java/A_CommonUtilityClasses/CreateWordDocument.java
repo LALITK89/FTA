@@ -1,4 +1,4 @@
-package com.selenium.fta.WordDocument;
+package A_CommonUtilityClasses;
 
 import java.awt.AWTException;
 import java.awt.HeadlessException;
@@ -18,8 +18,6 @@ import org.apache.poi.xwpf.usermodel.Document;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.usermodel.XWPFRun;
-
-import com.selenium.fta.utility_class.Utilityclass;
 
 public class CreateWordDocument 
 {

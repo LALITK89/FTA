@@ -1,4 +1,4 @@
-package com.selenium.fta.TestData;
+package A_CommonUtilityClasses;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -27,9 +27,10 @@ public class TestData
 public static void getWorkBookIbj() throws IOException
 		{
 			FileInputStream fis = new FileInputStream("TestData\\TestData.xlsx");
-			Wbook  = new XSSFWorkbook(fis);
-			
+			Wbook  = new XSSFWorkbook(fis);	
 		}
+
+
 // To Load Sheet	
 public static void getworksheet()
 		{

@@ -1,8 +1,6 @@
-package com.selenium.fta.TestData;
+package A_CommonUtilityClasses;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
-import com.selenium.fta.utility_class.Utilityclass;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
