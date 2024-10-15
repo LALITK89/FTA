@@ -1,4 +1,4 @@
-package com.selenium.fta.Clear_Cache;
+package A_CommonUtilityClasses;
 
 import java.awt.AWTException;
 import java.io.File;

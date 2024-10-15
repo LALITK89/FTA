@@ -1,4 +1,4 @@
-package com.selenium.fta.Logout_User;
+package B_RegistrationClasses;
 
 import java.awt.AWTException;
 import java.awt.HeadlessException;
@@ -9,8 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.selenium.fta.WordDocument.CreateWordDocument;
-import com.selenium.fta.utility_class.Utilityclass;
+import A_CommonUtilityClasses.CreateWordDocument;
+import A_CommonUtilityClasses.Utilityclass;
 
 public class logout 
 {

@@ -3,28 +3,24 @@ package com.selenium.fta.TestNG;
 import java.awt.AWTException;
 import java.awt.HeadlessException;
 import java.io.IOException;
-
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.selenium.fta.Add_Address.Add_Address;
-import com.selenium.fta.Browser_Launching.Close_Browser;
-import com.selenium.fta.Browser_Launching.Launch_Browser;
-import com.selenium.fta.Clear_Cache.ClearCache;
-import com.selenium.fta.Login_User.Login_User;
-import com.selenium.fta.Logout_User.logout;
-import com.selenium.fta.Signup_User.Signup_User;
-import com.selenium.fta.TestData.TestData;
-import com.selenium.fta.WordDocument.CreateWordDocument;
-import com.selenium.fta.order_placing.order;
-import com.selenium.fta.utility_class.Utilityclass;
+import A_CommonUtilityClasses.ClearCache;
+import A_CommonUtilityClasses.Close_Browser;
+import A_CommonUtilityClasses.CreateWordDocument;
+import A_CommonUtilityClasses.Launch_Browser;
+import A_CommonUtilityClasses.TestData;
+import A_CommonUtilityClasses.Utilityclass;
+import B1_EditRegistrationClasses.Add_Address;
+import B_RegistrationClasses.Login_User;
+import B_RegistrationClasses.Signup_User;
+import B_RegistrationClasses.logout;
+import C_OrderPlacingClasses.order;
 
 
 public class TestNG 

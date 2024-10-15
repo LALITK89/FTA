@@ -1,4 +1,4 @@
-package com.selenium.fta.Pdf_Comparision;
+package A_CommonUtilityClasses;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.rendering.PDFRenderer;
 import java.awt.image.BufferedImage;

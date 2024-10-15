@@ -1,6 +1,4 @@
-package com.selenium.fta.Browser_Launching;
-
-import com.selenium.fta.utility_class.Utilityclass;
+package A_CommonUtilityClasses;
 
 public class Close_Browser 
 {

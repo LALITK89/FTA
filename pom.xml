@@ -13,7 +13,8 @@
     <version>7.10.2</version>
     <scope>test</scope>
 </dependency>
-<!-- Below dependency allows to programmatically control a web browser to perform tasks such as clicking buttons, entering text, and navigating pages. -->
+<!-- Below dependency allows to programmatically control a web browser to perform tasks such as clicking buttons, 
+entering text, and navigating pages. -->
 <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-java</artifactId>

@@ -5,8 +5,10 @@
     <classes>
       <class name="com.selenium.fta.TestNG.TestNG">
         <methods>
+          <include name="loginUser"/>
           <include name="launch_browsers"/>
-          <include name="signupuser"/>
+          <include name="placing_order"/>
+          <include name="Add_new_address"/>
           <include name="Logout_User"/>
         </methods>
       </class> <!-- com.selenium.fta.TestNG.TestNG -->

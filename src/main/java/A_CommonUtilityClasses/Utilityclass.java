@@ -1,4 +1,4 @@
-package com.selenium.fta.utility_class;
+package A_CommonUtilityClasses;
 
 import java.io.FileInputStream;
 import java.io.IOException;
