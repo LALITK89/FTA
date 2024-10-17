@@ -17,7 +17,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 //XSSF Class --.xlsx
 
-public class TestData
+public class Input_TestData
 {
 	static Workbook Wbook = null;
 	static Sheet sheetobj  = null;

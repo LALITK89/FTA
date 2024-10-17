@@ -7,7 +7,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 
-public class TestDataOutput 
+public class Output_TestData 
 {
 	// To insert your output test data in excel file
 	public static void updateTestDataInExcel(String TestCaseID, String Message, String Status, String FBN) 
@@ -20,12 +20,12 @@ public class TestDataOutput
         try 
         {
             // Open the existing Excel file
-        	Utilityclass.configFile();
-            fis = new FileInputStream(Utilityclass.propobj.getProperty("TestData.Outputfile"));
+        	Utility_Class.configFile();
+            fis = new FileInputStream(Utility_Class.propobj.getProperty("TestData.Outputfile"));
             workbook = new XSSFWorkbook(fis);
 
             // Access the desired sheet (by name or index)
-            Sheet sheet = workbook.getSheet(Utilityclass.propobj.getProperty("OutputTestData.SheetName"));
+            Sheet sheet = workbook.getSheet(Utility_Class.propobj.getProperty("OutputTestData.SheetName"));
             if (sheet == null) 
             {
                 sheet = workbook.createSheet("LatestTestOutput");
@@ -57,7 +57,7 @@ public class TestDataOutput
             }
 
             // Write the changes to the file
-            fos = new FileOutputStream(Utilityclass.propobj.getProperty("TestData.Outputfile"));
+            fos = new FileOutputStream(Utility_Class.propobj.getProperty("TestData.Outputfile"));
             workbook.write(fos);
 
         } 

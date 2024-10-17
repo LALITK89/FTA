@@ -9,8 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import A_CommonUtilityClasses.CreateWordDocument;
-import A_CommonUtilityClasses.Utilityclass;
+import A_CommonUtilityClasses.TPD_Document;
+import A_CommonUtilityClasses.Utility_Class;
 
 public class logout_User 
 {
@@ -20,9 +20,9 @@ public class logout_User
     // To logout the user
 	public void logoutUser() throws HeadlessException, InvalidFormatException, IOException, AWTException
 	{
-		PageFactory.initElements(Utilityclass.driver, logout_User.class);
-		Utilityclass.clickMethod(logout_btn);
-		CreateWordDocument.captureScreenshotAndDescrptionInsertIntoWordDocument("Logout the User");
-		CreateWordDocument.printResult("Execution Status: Passed.");
+		PageFactory.initElements(Utility_Class.driver, logout_User.class);
+		Utility_Class.clickMethod(logout_btn);
+		TPD_Document.captureScreenshotAndDescrptionInsertIntoWordDocument("Logout the User");
+		TPD_Document.printResult("Execution Status: Passed.");
 	}
 }
