@@ -30,7 +30,7 @@ public static String documentCreation(String TCID) throws IOException
 	    {
 	
 	// Save the document
-		Utilityclass.configfile();
+		Utilityclass.configFile();
         String DocumentFolder = Utilityclass.propobj.getProperty("TPD.url");
         documentPath = DocumentFolder+TCID+".docx";
 	    FileOutputStream fos = new FileOutputStream(documentPath);;
@@ -44,7 +44,7 @@ public static String documentCreation(String TCID) throws IOException
 	 return documentPath;
    }
 
- public static String CaptureScreenshotAndDescrptionInsertIntoWordDocument(String ScreenshotDescription) throws IOException, HeadlessException, AWTException, InvalidFormatException
+ public static String captureScreenshotAndDescrptionInsertIntoWordDocument(String ScreenshotDescription) throws IOException, HeadlessException, AWTException, InvalidFormatException
     {
     	// Path to the Word document
            String DocumentPath = documentPath;

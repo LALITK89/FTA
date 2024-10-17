@@ -20,7 +20,7 @@ public class TestDataOutput
         try 
         {
             // Open the existing Excel file
-        	Utilityclass.configfile();
+        	Utilityclass.configFile();
             fis = new FileInputStream(Utilityclass.propobj.getProperty("TestData.Outputfile"));
             workbook = new XSSFWorkbook(fis);
 

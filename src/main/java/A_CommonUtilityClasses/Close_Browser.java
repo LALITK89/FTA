@@ -3,7 +3,7 @@ package A_CommonUtilityClasses;
 public class Close_Browser 
 {
 	// To close the browser
-	public void Browserclose()
+	public void closeBrowser()
 	{
 	   Utilityclass.driver.close();
 	

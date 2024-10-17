@@ -12,17 +12,17 @@ import org.openqa.selenium.support.PageFactory;
 import A_CommonUtilityClasses.CreateWordDocument;
 import A_CommonUtilityClasses.Utilityclass;
 
-public class logout 
+public class logout_User 
 {
 	@FindBy(xpath="/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a")
 	static private WebElement logout_btn;
 	
     // To logout the user
-	public void Logout() throws HeadlessException, InvalidFormatException, IOException, AWTException
+	public void logoutUser() throws HeadlessException, InvalidFormatException, IOException, AWTException
 	{
-		PageFactory.initElements(Utilityclass.driver, logout.class);
-		Utilityclass.clickmethod(logout_btn);
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Logout the User");
+		PageFactory.initElements(Utilityclass.driver, logout_User.class);
+		Utilityclass.clickMethod(logout_btn);
+		CreateWordDocument.captureScreenshotAndDescrptionInsertIntoWordDocument("Logout the User");
 		CreateWordDocument.printResult("Execution Status: Passed.");
 	}
 }

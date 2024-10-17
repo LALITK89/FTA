@@ -43,33 +43,33 @@ public class Signup_User
 	static private WebElement Varify_msg;
 	
 public static String value = null;	
-public String signupuser() throws Exception
+public String signupUser() throws Exception
 {
 	    PageFactory.initElements(Utilityclass.driver, Signup_User.class);
- 	    Utilityclass.clickmethod(signup_btn);
- 	    CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Click on the Signup link");
+ 	    Utilityclass.clickMethod(signup_btn);
+ 	    CreateWordDocument.captureScreenshotAndDescrptionInsertIntoWordDocument("Click on the Signup link");
  	    Utilityclass.driverWait(Gender,100);
- 	    Utilityclass.clickmethod(Gender);
+ 	    Utilityclass.clickMethod(Gender);
  	    Utilityclass.driverWait(first_name,100);
- 	    CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Select the Gender");
- 	    Utilityclass.inputmethod(first_name,TestData.TDMap.get("firstName_ED"));
+ 	    CreateWordDocument.captureScreenshotAndDescrptionInsertIntoWordDocument("Select the Gender");
+ 	    Utilityclass.inputMethod(first_name,TestData.TDMap.get("firstName_ED"));
  	    Utilityclass.driverWait(last_name,100);
- 	    CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Enter the first name");
-		Utilityclass.inputmethod(last_name,TestData.TDMap.get("LastName_ED"));
+ 	    CreateWordDocument.captureScreenshotAndDescrptionInsertIntoWordDocument("Enter the first name");
+		Utilityclass.inputMethod(last_name,TestData.TDMap.get("LastName_ED"));
 		Utilityclass.driverWait(Email_id,100);
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Enter the last name");
-		Utilityclass.inputmethod(Email_id,TestData.TDMap.get("Signup_emailid"));
+		CreateWordDocument.captureScreenshotAndDescrptionInsertIntoWordDocument("Enter the last name");
+		Utilityclass.inputMethod(Email_id,TestData.TDMap.get("Signup_emailid"));
 		String value = Utilityclass.driver.findElement(By.id("Email")).getText();
 		Utilityclass.driverWait(password_In,100);
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Enter the signup email id");
-		Utilityclass.inputmethod(password_In,TestData.TDMap.get("Password_ED"));
+		CreateWordDocument.captureScreenshotAndDescrptionInsertIntoWordDocument("Enter the signup email id");
+		Utilityclass.inputMethod(password_In,TestData.TDMap.get("Password_ED"));
 		Utilityclass.driverWait(confirm_Password,100);
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Enter the password");
-		Utilityclass.inputmethod(confirm_Password,TestData.TDMap.get("Conf_Password_ED"));
+		CreateWordDocument.captureScreenshotAndDescrptionInsertIntoWordDocument("Enter the password");
+		Utilityclass.inputMethod(confirm_Password,TestData.TDMap.get("Conf_Password_ED"));
 		Utilityclass.driverWait(register_btn,100);
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Enter the Confirm password");
-		Utilityclass.clickmethod(register_btn);
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Click on the register button");
+		CreateWordDocument.captureScreenshotAndDescrptionInsertIntoWordDocument("Enter the Confirm password");
+		Utilityclass.clickMethod(register_btn);
+		CreateWordDocument.captureScreenshotAndDescrptionInsertIntoWordDocument("Click on the register button");
 		return value;
 	}
 }

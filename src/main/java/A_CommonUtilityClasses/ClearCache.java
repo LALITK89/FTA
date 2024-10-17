@@ -6,7 +6,7 @@ import java.io.IOException;
 public class ClearCache 
 {
 	//To clear the browser Cookies cache And Data
-  public static void DeleteCookiesAndData() throws IOException, InterruptedException, AWTException
+  public static void deleteCookiesAndData() throws IOException, InterruptedException, AWTException
    {
 	 try 
 	  {
@@ -44,6 +44,6 @@ public class ClearCache
 
      public static void main(String args[]) throws IOException, InterruptedException, AWTException
 	        {
-	        DeleteCookiesAndData();
+	        deleteCookiesAndData();
 	        }
 }
