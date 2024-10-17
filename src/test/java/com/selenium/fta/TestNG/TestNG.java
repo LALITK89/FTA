@@ -24,7 +24,7 @@ import C_OrderPlacingClasses.Place_Order;
 public class TestNG 
 
 {
-	//will execute before all @Test Method
+	//will execute before all @Test method
 	 @BeforeMethod(alwaysRun = true)
      public void clearCacheAndOpenBrowser() throws InterruptedException, IOException, AWTException
          {
