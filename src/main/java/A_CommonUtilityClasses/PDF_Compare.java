@@ -5,7 +5,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class PDFImageComparator 
+public class PDF_Compare 
 {
 	// To compare the Sourcse and destination PDF files by using this method
 	public static void comparePDFImages(String SourcePDFpath, String DestinationPDFpath) 

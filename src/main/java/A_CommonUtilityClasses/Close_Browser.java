@@ -5,7 +5,7 @@ public class Close_Browser
 	// To close the browser
 	public void closeBrowser()
 	{
-	   Utilityclass.driver.close();
+	   Utility_Class.driver.close();
 	
 	}
 }

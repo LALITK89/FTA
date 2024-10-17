@@ -3,7 +3,7 @@ package A_CommonUtilityClasses;
 import java.awt.AWTException;
 import java.io.File;
 import java.io.IOException;
-public class ClearCache 
+public class Clear_Cache 
 {
 	//To clear the browser Cookies cache And Data
   public static void deleteCookiesAndData() throws IOException, InterruptedException, AWTException

@@ -18,7 +18,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Utilityclass
+public class Utility_Class
  {
 	public static Properties propobj =null;
 	public static WebDriver driver=null;
@@ -187,7 +187,7 @@ public class Utilityclass
 		{
 			if(web.isEnabled())
 			{
-				JavascriptExecutor js = (JavascriptExecutor)Utilityclass.driver;
+				JavascriptExecutor js = (JavascriptExecutor)Utility_Class.driver;
 				js.executeScript("arguments[0].scrollIntoView(true)", web);
 			}
 	     }

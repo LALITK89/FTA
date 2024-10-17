@@ -19,7 +19,7 @@ import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.usermodel.XWPFRun;
 
-public class CreateWordDocument 
+public class TPD_Document 
 {
    
 public static String documentPath = null;
@@ -30,8 +30,8 @@ public static String documentCreation(String TCID) throws IOException
 	    {
 	
 	// Save the document
-		Utilityclass.configFile();
-        String DocumentFolder = Utilityclass.propobj.getProperty("TPD.url");
+		Utility_Class.configFile();
+        String DocumentFolder = Utility_Class.propobj.getProperty("TPD.url");
         documentPath = DocumentFolder+TCID+".docx";
 	    FileOutputStream fos = new FileOutputStream(documentPath);;
 	    document.write(fos);

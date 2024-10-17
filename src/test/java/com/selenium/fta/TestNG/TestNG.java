@@ -8,17 +8,17 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import A_CommonUtilityClasses.ClearCache;
+import A_CommonUtilityClasses.Clear_Cache;
 import A_CommonUtilityClasses.Close_Browser;
-import A_CommonUtilityClasses.CreateWordDocument;
+import A_CommonUtilityClasses.TPD_Document;
 import A_CommonUtilityClasses.Launch_Browser;
-import A_CommonUtilityClasses.TestData;
-import A_CommonUtilityClasses.Utilityclass;
+import A_CommonUtilityClasses.Input_TestData;
+import A_CommonUtilityClasses.Utility_Class;
 import B1_EditRegistrationClasses.Add_Address;
 import B_RegistrationClasses.Login_User;
 import B_RegistrationClasses.Signup_User;
 import B_RegistrationClasses.logout_User;
-import C_OrderPlacingClasses.order;
+import C_OrderPlacingClasses.Place_Order;
 
 
 public class TestNG 
@@ -28,7 +28,7 @@ public class TestNG
 	 @BeforeMethod(alwaysRun = true)
      public void clearCacheAndOpenBrowser() throws InterruptedException, IOException, AWTException
          {
-    	  ClearCache.deleteCookiesAndData();
+    	  Clear_Cache.deleteCookiesAndData();
     	  Thread.sleep(5000);
     	  Launch_Browser browser =new Launch_Browser();
     	  browser.openBrowser();
@@ -40,12 +40,12 @@ public class TestNG
       public void registerNewUser() throws Exception
          {
     	  String TCID = "TC001";
- 	      TestData.getactualScenarioData(TCID);
- 	      CreateWordDocument.documentCreation(TCID);
+ 	      Input_TestData.getactualScenarioData(TCID);
+ 	      TPD_Document.documentCreation(TCID);
     	  Signup_User signup = new Signup_User();
     	  signup.signupUser();
     	  String Actual_Value= "The specified email already exists";
-    	  String Expected_Value= Utilityclass.driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[1]/div/ul/li")).getText();
+    	  String Expected_Value= Utility_Class.driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[1]/div/ul/li")).getText();
      	  Assert.assertEquals(Actual_Value, Expected_Value);
          }
          
@@ -55,8 +55,8 @@ public class TestNG
       public static void loginTheUser() throws Exception
          {
     	  String TCID = "TC002";
- 	      TestData.getactualScenarioData(TCID);
- 	      CreateWordDocument.documentCreation(TCID);
+ 	      Input_TestData.getactualScenarioData(TCID);
+ 	      TPD_Document.documentCreation(TCID);
     	  Login_User loginobj= new Login_User();
     	  loginobj.loginUser();
          }
@@ -66,8 +66,8 @@ public class TestNG
       public static void addNewAddress() throws Exception
       {
     	  String TCID = "TC004";
- 	      TestData.getactualScenarioData(TCID);
- 	      CreateWordDocument.documentCreation(TCID);
+ 	      Input_TestData.getactualScenarioData(TCID);
+ 	      TPD_Document.documentCreation(TCID);
  	      Login_User loginobj= new Login_User();
    	      loginobj.loginUser();
     	  Add_Address addressobj = new Add_Address();
@@ -79,11 +79,11 @@ public class TestNG
       public static void placeTheOrder() throws Exception
       {
     	  String TCID = "TC003";
- 	      TestData.getactualScenarioData(TCID);
- 	      CreateWordDocument.documentCreation(TCID);
+ 	      Input_TestData.getactualScenarioData(TCID);
+ 	      TPD_Document.documentCreation(TCID);
     	  Login_User loginobj= new Login_User();
     	  loginobj.loginUser();
-    	  order orderobj = new order();
+    	  Place_Order orderobj = new Place_Order();
     	  orderobj.products();
       }
 		
