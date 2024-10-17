@@ -24,7 +24,7 @@ public class Utilityclass
 	public static WebDriver driver=null;
 	
 	// To launch the browser
-	public static WebDriver browser(String browsers)
+	public static WebDriver launchBrowser(String browsers)
 {
 	
 	if(browsers.equalsIgnoreCase("ch"))
@@ -46,7 +46,7 @@ public class Utilityclass
 	return driver;
 }
 	// To open the URL
-	public static void url(String val)
+	public static void openURL(String val)
 	{
 	if(val.equalsIgnoreCase("S42"))
 	{
@@ -63,7 +63,7 @@ public class Utilityclass
 	}
 	
 	// To take the input from Configuration file
-    public static void configfile() throws IOException
+    public static void configFile() throws IOException
 	{
 		FileInputStream fis = new FileInputStream("Configuration//config.properties");
 		propobj =new Properties();
@@ -72,7 +72,7 @@ public class Utilityclass
     
     
     // To enter the value in field
-    public static void inputmethod(WebElement web,String val)
+    public static void inputMethod(WebElement web,String val)
 	{
 		if(web.isDisplayed())
 		{
@@ -84,7 +84,7 @@ public class Utilityclass
 	}
     
     // To click on the element
-    public static void clickmethod(WebElement web)
+    public static void clickMethod(WebElement web)
 	{
 		if(web.isDisplayed())
 		{
@@ -96,7 +96,7 @@ public class Utilityclass
 	}
     
     // To mousehover on the element 
-    public static void mousehover(WebElement web)
+    public static void mouseHover(WebElement web)
 	{
 		if(web.isDisplayed())
 		{
@@ -109,7 +109,7 @@ public class Utilityclass
 	}
     
     // To select the value from drop down list by using indexing
-    public static void selectbyindexing(WebElement web, int val)
+    public static void selectByIndexing(WebElement web, int val)
 	{
 		if(web.isDisplayed())
 		{
@@ -121,7 +121,7 @@ public class Utilityclass
 		}
 	}
  // To select the value from drop down list by using visible text
-    public static void selectbyvisibletext(WebElement web, String val)
+    public static void selectByVisibletext(WebElement web, String val)
 	{
 		if(web.isDisplayed())
 		{
@@ -133,7 +133,7 @@ public class Utilityclass
 		}
 	}
  // To select the value from drop down list by using value
-    public static void selectbyvalue(WebElement web, String val)
+    public static void selectByValue(WebElement web, String val)
 	{
 		if(web.isDisplayed())
 		{
@@ -145,7 +145,7 @@ public class Utilityclass
 		}
 	}
  // To de-select the value from drop down list by using indexing
-	public static void deselectbyindexing(WebElement web, int val)
+	public static void deselectByIndexing(WebElement web, int val)
 	{
 		if(web.isDisplayed())
 		{
@@ -157,7 +157,7 @@ public class Utilityclass
 		}
 	}
 	// To de-select the value from drop down list by using visible text
-	public static void deselectbyvisibletext(WebElement web, String val)
+	public static void deselectByVisibletext(WebElement web, String val)
 	{
 		if(web.isDisplayed())
 		{
@@ -169,7 +169,7 @@ public class Utilityclass
 		}
 	}
 	// To de-select the value from drop down list by using value
-	public static void deselectbyvalue(WebElement web, String val)
+	public static void deselectByValue(WebElement web, String val)
 	{
 		if(web.isDisplayed())
 		{
@@ -181,7 +181,7 @@ public class Utilityclass
 		}
 	}
 	// To scroll the page till element.
-	public static void scrollpage(WebElement web)
+	public static void scrollPage(WebElement web)
 	{
 		if(web.isDisplayed())
 		{
@@ -206,7 +206,7 @@ public class Utilityclass
 	}
 	
 	// To drag and drop the element from one location to another location
-	public static void draganddrop(WebElement Sourcelocator, WebElement Destinationlocator)
+	public static void dragAndDrop(WebElement Sourcelocator, WebElement Destinationlocator)
 	{
 		Actions actobj = new Actions(driver);
 		actobj.dragAndDrop(Sourcelocator, Destinationlocator).build().perform();

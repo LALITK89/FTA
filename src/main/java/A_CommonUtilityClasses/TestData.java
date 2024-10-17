@@ -88,7 +88,7 @@ public static int getdesirerownum(String TCID) throws IOException //This method 
 		
 	
 //To get actual scenario data
- public static void GetactualScenarioData(String TCID) throws IOException //
+ public static void getactualScenarioData(String TCID) throws IOException //
       {
 	TDMap =new HashMap<String, String>(); // To store the data in key-value form
 	int rownumber = getdesirerownum(TCID); // It will return the row data in which having the test data.

@@ -26,17 +26,17 @@ public class Login_User
 	static private WebElement Login_btn;
 	
      
-	public void login() throws Exception
+	public void loginUser() throws Exception
       {
 		PageFactory.initElements(Utilityclass.driver, Login_User.class);// To use the WebElement refrenece in test case use Pagefactory calss
-		Utilityclass.clickmethod(Login_link);
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Open the Login Link");
-		Utilityclass.inputmethod(Email_In,TestData.TDMap.get("User_Login_UserName_ED"));
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Enter the email id");
-        Utilityclass.inputmethod(Password_In,TestData.TDMap.get("User_Login_Password_ED"));
-        CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Enter the Password");
-        Utilityclass.clickmethod(Login_btn);
-        CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Click on the login button to login the user");
+		Utilityclass.clickMethod(Login_link);
+		CreateWordDocument.captureScreenshotAndDescrptionInsertIntoWordDocument("Open the Login Link");
+		Utilityclass.inputMethod(Email_In,TestData.TDMap.get("User_Login_UserName_ED"));
+		CreateWordDocument.captureScreenshotAndDescrptionInsertIntoWordDocument("Enter the email id");
+        Utilityclass.inputMethod(Password_In,TestData.TDMap.get("User_Login_Password_ED"));
+        CreateWordDocument.captureScreenshotAndDescrptionInsertIntoWordDocument("Enter the Password");
+        Utilityclass.clickMethod(Login_btn);
+        CreateWordDocument.captureScreenshotAndDescrptionInsertIntoWordDocument("Click on the login button to login the user");
         }
 	     
  }

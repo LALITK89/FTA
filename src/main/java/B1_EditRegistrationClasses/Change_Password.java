@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import A_CommonUtilityClasses.TestData;
 import A_CommonUtilityClasses.Utilityclass;
 
-public class ChangePassword
+public class Change_Password
 {
 	@FindBy(xpath="/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a")
 	static private WebElement Login_link;
@@ -30,13 +30,13 @@ public class ChangePassword
     {
 	 
 	 String TCID = "TC001";
-	 TestData.GetactualScenarioData(TCID);  
-	 PageFactory.initElements(Utilityclass.driver,ChangePassword.class );
-	 Utilityclass.clickmethod(Login_link);
-	 Utilityclass.clickmethod(forgot_link);
-	 Utilityclass.mousehover(Login_link);
-	 Utilityclass.inputmethod(forgot_email, TestData.TDMap.get("User_Login_UserName_ED"));
-	 Utilityclass.clickmethod(Recovery_btn);
+	 TestData.getactualScenarioData(TCID);  
+	 PageFactory.initElements(Utilityclass.driver,Change_Password.class );
+	 Utilityclass.clickMethod(Login_link);
+	 Utilityclass.clickMethod(forgot_link);
+	 Utilityclass.mouseHover(Login_link);
+	 Utilityclass.inputMethod(forgot_email, TestData.TDMap.get("User_Login_UserName_ED"));
+	 Utilityclass.clickMethod(Recovery_btn);
 	 String actual_message = success_msg.getText();
 	 String Expected_message = "Email with instructions has been sent to you.";  
 	   if(actual_message == Expected_message)
