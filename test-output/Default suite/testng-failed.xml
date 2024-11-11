@@ -3,16 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.selenium.fta.TestNG.TestNG">
+      <class name="Excel.MyTest">
         <methods>
-          <include name="placeTheOrder"/>
-          <include name="loginTheUser"/>
-          <include name="logoutTheUser"/>
-          <include name="registerNewUser"/>
-          <include name="addNewAddress"/>
-          <include name="clearCacheAndOpenBrowser"/>
+          <include name="testWithGroups"/>
         </methods>
-      </class> <!-- com.selenium.fta.TestNG.TestNG -->
+      </class> <!-- Excel.MyTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
