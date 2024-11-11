@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Excel.MyTest">
+      <class name="TestRunnerClasses.TestNG">
         <methods>
-          <include name="testWithGroups"/>
+          <include name="clearCacheAndOpenBrowser"/>
+          <include name="logoutTheUser"/>
+          <include name="placeTheOrder"/>
         </methods>
-      </class> <!-- Excel.MyTest -->
+      </class> <!-- TestRunnerClasses.TestNG -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -7,7 +7,6 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import A_CommonUtilityclasses.Clear_Cache;
 import A_CommonUtilityclasses.Close_Browser;
@@ -22,7 +21,6 @@ import B_RegistrationClasses.logout_User;
 import C_OrderPlacingClasses.Place_Order;
 
 
-@Listeners(MyCustomListener.class)
 public class TestNG 
 
 {
@@ -38,7 +36,7 @@ public class TestNG
          }
 	
 	 //Sign up the user	 
-      @Test(priority = 1,groups = {"Regression"}, description = "Signup the user")
+      @Test(priority = 1,groups = {"Sanity","Regression"}, description = "Signup the user")
       public void registerNewUser() throws Exception
          {
     	  String TCID = "TC001";
@@ -53,7 +51,7 @@ public class TestNG
          
       
       //Login the user
-      @Test(priority = 2,groups = {"Sanity"}, description = "Logging the user")
+      @Test(priority = 2,groups = {"Sanity","Regression"}, description = "Logging the user")
       public void loginTheUser() throws Exception
          {
     	  String TCID = "TC002";
@@ -64,7 +62,7 @@ public class TestNG
          }
       
     //Add the new address
-      @Test(priority = 3,groups = {"Regression"}, description = "Adding New Address")
+      @Test(priority = 3,groups = {"Sanity","Regression"}, description = "Adding New Address")
       public void addNewAddress() throws Exception
       {
     	  String TCID = "TC004";
@@ -77,7 +75,7 @@ public class TestNG
       }
       
       //Place the order
-      @Test(priority = 4,groups = {"Regression"}, description = "Placing the order")
+      @Test(priority = 4,groups = {"Sanity","Regression"}, description = "Placing the order")
       public void placeTheOrder() throws Exception
       {
     	  String TCID = "TC003";
