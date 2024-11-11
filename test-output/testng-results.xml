@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-21T19:04:38 IST" name="Default Suite" finished-at="2024-10-21T19:04:38 IST" duration-ms="0">
+  <suite started-at="2024-11-11T14:29:19 IST" name="Suite" finished-at="2024-11-11T14:29:40 IST" duration-ms="20769">
     <groups>
+      <group name="Sanity">
+        <method signature="TestNG.loginTheUser()[pri:2, instance:TestRunnerClasses.TestNG@7857fe2]" name="loginTheUser" class="TestRunnerClasses.TestNG"/>
+      </group> <!-- Sanity -->
     </groups>
-  </suite> <!-- Default Suite -->
+    <test started-at="2024-11-11T14:29:19 IST" name="Test" finished-at="2024-11-11T14:29:40 IST" duration-ms="20769">
+      <class name="TestRunnerClasses.TestNG">
+        <test-method is-config="true" signature="clearCacheAndOpenBrowser()[pri:0, instance:TestRunnerClasses.TestNG@7857fe2]" started-at="2024-11-11T14:29:19 IST" name="clearCacheAndOpenBrowser" finished-at="2024-11-11T14:29:33 IST" duration-ms="13296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearCacheAndOpenBrowser -->
+        <test-method signature="loginTheUser()[pri:2, instance:TestRunnerClasses.TestNG@7857fe2]" started-at="2024-11-11T14:29:33 IST" name="loginTheUser" description="Logging the user" finished-at="2024-11-11T14:29:38 IST" duration-ms="5539" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTheUser -->
+        <test-method is-config="true" signature="logoutTheUser()[pri:0, instance:TestRunnerClasses.TestNG@7857fe2]" started-at="2024-11-11T14:29:38 IST" name="logoutTheUser" finished-at="2024-11-11T14:29:40 IST" duration-ms="1868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutTheUser -->
+      </class> <!-- TestRunnerClasses.TestNG -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
