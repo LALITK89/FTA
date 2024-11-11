@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import A_CommonUtilityClasses.Input_TestData;
-import A_CommonUtilityClasses.Utility_Class;
+import A_CommonUtilityclasses.Input_TestData;
+import A_CommonUtilityclasses.Utility_Class;
 
 public class Change_Password
 {

@@ -5,8 +5,23 @@
   <version>0.0.1-SNAPSHOT</version>
    <name>Tosca</name>
   <description>Tosca_Description</description>
+  <!-- Below plugin used to hit the testng.xml file -->
+  <build>
+   <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.5.1</version>
+           <configuration>
+              <suiteXmlFiles>
+                 <suiteXmlFile>testng.xml</suiteXmlFile>
+               </suiteXmlFiles>
+           </configuration>
+       </plugin>
+     </plugins>
+   </build>
  <dependencies>
- <!-- Below dependency used to hit testng.xml file -->
+ <!-- To get started with TestNG, include the below dependency in your project -->
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
@@ -73,4 +88,5 @@ entering text, and navigating pages. -->
     <version>2.0.1</version>
 </dependency>
  </dependencies>
+ 
 </project>
