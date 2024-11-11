@@ -4,9 +4,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import A_CommonUtilityClasses.CreateWordDocument;
-import A_CommonUtilityClasses.TestData;
-import A_CommonUtilityClasses.Utilityclass;
+import A_CommonUtilityclasses.Input_TestData;
+import A_CommonUtilityclasses.TPD_Document;
+import A_CommonUtilityclasses.Utility_Class;
 
 public class Login_User 
 {
@@ -26,17 +26,17 @@ public class Login_User
 	static private WebElement Login_btn;
 	
      
-	public void login() throws Exception
+	public void loginUser() throws Exception
       {
-		PageFactory.initElements(Utilityclass.driver, Login_User.class);// To use the WebElement refrenece in test case use Pagefactory calss
-		Utilityclass.clickmethod(Login_link);
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Open the Login Link");
-		Utilityclass.inputmethod(Email_In,TestData.TDMap.get("User_Login_UserName_ED"));
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Enter the email id");
-        Utilityclass.inputmethod(Password_In,TestData.TDMap.get("User_Login_Password_ED"));
-        CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Enter the Password");
-        Utilityclass.clickmethod(Login_btn);
-        CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Click on the login button to login the user");
+		PageFactory.initElements(Utility_Class.driver, Login_User.class);// To use the WebElement refrenece in test case use Pagefactory calss
+		Utility_Class.clickMethod(Login_link);
+		TPD_Document.captureScreenshotAndDescrptionInsertIntoWordDocument("Open the Login Link");
+		Utility_Class.inputMethod(Email_In,Input_TestData.TDMap.get("User_Login_UserName_ED"));
+		TPD_Document.captureScreenshotAndDescrptionInsertIntoWordDocument("Enter the email id");
+        Utility_Class.inputMethod(Password_In,Input_TestData.TDMap.get("User_Login_Password_ED"));
+        TPD_Document.captureScreenshotAndDescrptionInsertIntoWordDocument("Enter the Password");
+        Utility_Class.clickMethod(Login_btn);
+        TPD_Document.captureScreenshotAndDescrptionInsertIntoWordDocument("Click on the login button to login the user");
         }
 	     
  }

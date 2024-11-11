@@ -9,9 +9,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import A_CommonUtilityClasses.CreateWordDocument;
-import A_CommonUtilityClasses.TestData;
-import A_CommonUtilityClasses.Utilityclass;
+import A_CommonUtilityclasses.Input_TestData;
+import A_CommonUtilityclasses.TPD_Document;
+import A_CommonUtilityclasses.Utility_Class;
 
 public class Add_Address 
 {
@@ -63,46 +63,46 @@ public class Add_Address
 	@FindBy(xpath="/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[2]/input")
 	static private WebElement save_btn;
      
-	public void New_Address() throws HeadlessException, InvalidFormatException, IOException, AWTException
+	public void addAddress() throws HeadlessException, InvalidFormatException, IOException, AWTException
 	{
-		PageFactory.initElements(Utilityclass.driver, Add_Address.class);// To use the WebElement refrenece in test case use Pagefactory calss	
-		Utilityclass.clickmethod(user_email);
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Click on the email hyperlink");
-		Utilityclass.clickmethod(Address_link);
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Click on the Address menu");
-		Utilityclass.clickmethod(Add_btn);
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Click on the Add new button");
-		Utilityclass.inputmethod(firstname,TestData.TDMap.get("firstName_ED"));
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Enter the first name");
-		Utilityclass.inputmethod(lastname,TestData.TDMap.get("LastName_ED"));
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Enter the last name");
-		Utilityclass.inputmethod(email_id,TestData.TDMap.get("Signup_emailid"));
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Enter the email id");
-		Utilityclass.inputmethod(Comapny_Name,TestData.TDMap.get("Comapny_Name_ED"));
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Enter the company name");
-		Utilityclass.inputmethod(CountryId,TestData.TDMap.get("Country_ID_ED"));
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Select the country ID from drop down");
+		PageFactory.initElements(Utility_Class.driver, Add_Address.class);// To use the WebElement refrenece in test case use Pagefactory calss	
+		Utility_Class.clickMethod(user_email);
+		TPD_Document.captureScreenshotAndDescrptionInsertIntoWordDocument("Click on the email hyperlink");
+		Utility_Class.clickMethod(Address_link);
+		TPD_Document.captureScreenshotAndDescrptionInsertIntoWordDocument("Click on the Address menu");
+		Utility_Class.clickMethod(Add_btn);
+		TPD_Document.captureScreenshotAndDescrptionInsertIntoWordDocument("Click on the Add new button");
+		Utility_Class.inputMethod(firstname,Input_TestData.TDMap.get("firstName_ED"));
+		TPD_Document.captureScreenshotAndDescrptionInsertIntoWordDocument("Enter the first name");
+		Utility_Class.inputMethod(lastname,Input_TestData.TDMap.get("LastName_ED"));
+		TPD_Document.captureScreenshotAndDescrptionInsertIntoWordDocument("Enter the last name");
+		Utility_Class.inputMethod(email_id,Input_TestData.TDMap.get("Signup_emailid"));
+		TPD_Document.captureScreenshotAndDescrptionInsertIntoWordDocument("Enter the email id");
+		Utility_Class.inputMethod(Comapny_Name,Input_TestData.TDMap.get("Comapny_Name_ED"));
+		TPD_Document.captureScreenshotAndDescrptionInsertIntoWordDocument("Enter the company name");
+		Utility_Class.inputMethod(CountryId,Input_TestData.TDMap.get("Country_ID_ED"));
+		TPD_Document.captureScreenshotAndDescrptionInsertIntoWordDocument("Select the country ID from drop down");
 //		Utilityclass.inputmethod(StateProvinceId,TestData.TDMap.get("State_ID_ED"));
 //		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Select the state from drop down");
-		Utilityclass.inputmethod(City,TestData.TDMap.get("City_ED"));
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Enter the city name");
-		Utilityclass.inputmethod(Address1,TestData.TDMap.get("Address1_ED"));
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Enter the Address1");
-		Utilityclass.inputmethod(Address2,TestData.TDMap.get("Address2_ED"));
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Enter the Address2");
-		Utilityclass.inputmethod(ZipPostalCode,TestData.TDMap.get("ZipPostalCode_ED"));
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Enter the Zip Postal Code");
-		Utilityclass.inputmethod(PhoneNumber,TestData.TDMap.get("PhoneNumber_ED"));
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Enter the Phone Number");
-		Utilityclass.inputmethod(FaxNumber,TestData.TDMap.get("FaxNumber_ED"));
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Enter the Fax Number");
-		Utilityclass.clickmethod(save_btn);
-		CreateWordDocument.CaptureScreenshotAndDescrptionInsertIntoWordDocument("Click on the Save button");
+		Utility_Class.inputMethod(City,Input_TestData.TDMap.get("City_ED"));
+		TPD_Document.captureScreenshotAndDescrptionInsertIntoWordDocument("Enter the city name");
+		Utility_Class.inputMethod(Address1,Input_TestData.TDMap.get("Address1_ED"));
+		TPD_Document.captureScreenshotAndDescrptionInsertIntoWordDocument("Enter the Address1");
+		Utility_Class.inputMethod(Address2,Input_TestData.TDMap.get("Address2_ED"));
+		TPD_Document.captureScreenshotAndDescrptionInsertIntoWordDocument("Enter the Address2");
+		Utility_Class.inputMethod(ZipPostalCode,Input_TestData.TDMap.get("ZipPostalCode_ED"));
+		TPD_Document.captureScreenshotAndDescrptionInsertIntoWordDocument("Enter the Zip Postal Code");
+		Utility_Class.inputMethod(PhoneNumber,Input_TestData.TDMap.get("PhoneNumber_ED"));
+		TPD_Document.captureScreenshotAndDescrptionInsertIntoWordDocument("Enter the Phone Number");
+		Utility_Class.inputMethod(FaxNumber,Input_TestData.TDMap.get("FaxNumber_ED"));
+		TPD_Document.captureScreenshotAndDescrptionInsertIntoWordDocument("Enter the Fax Number");
+		Utility_Class.clickMethod(save_btn);
+		TPD_Document.captureScreenshotAndDescrptionInsertIntoWordDocument("Click on the Save button");
 	}
 	public static void main(String[] args) throws HeadlessException, InvalidFormatException, IOException, AWTException
 {
 		Add_Address addressobj = new Add_Address();
-		addressobj.New_Address();
+		addressobj.addAddress();
 }
 }
 
