@@ -6,8 +6,8 @@
       <class name="TestRunnerClasses.TestNG">
         <methods>
           <include name="clearCacheAndOpenBrowser"/>
+          <include name="registerNewUser"/>
           <include name="logoutTheUser"/>
-          <include name="placeTheOrder"/>
         </methods>
       </class> <!-- TestRunnerClasses.TestNG -->
     </classes>

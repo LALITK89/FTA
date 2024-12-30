@@ -4,13 +4,14 @@
   <test thread-count="5" name="Test(failed)">
     <groups>
       <run>
-        <include name="Regression"/>
+        <include name="Sanity"/>
       </run>
     </groups>
     <classes>
       <class name="TestRunnerClasses.TestNG">
         <methods>
           <include name="clearCacheAndOpenBrowser"/>
+          <include name="loginTheUser"/>
           <include name="addNewAddress"/>
           <include name="registerNewUser"/>
           <include name="placeTheOrder"/>
