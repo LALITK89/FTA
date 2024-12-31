@@ -11,8 +11,6 @@
       <class name="TestRunnerClasses.TestNG">
         <methods>
           <include name="clearCacheAndOpenBrowser"/>
-          <include name="addNewAddress"/>
-          <include name="registerNewUser"/>
           <include name="placeTheOrder"/>
           <include name="logoutTheUser"/>
         </methods>
