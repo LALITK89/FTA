@@ -14,7 +14,7 @@ import A_CommonUtilityclasses.Utility_Class;
 
 public class logout_User 
 {
-	@FindBy(xpath="/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a")
+	@FindBy(xpath = "/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a")
 	static private WebElement logout_btn;
 	
     // To logout the user

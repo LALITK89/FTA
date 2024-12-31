@@ -15,10 +15,10 @@ import A_CommonUtilityclasses.Utility_Class;
 
 public class Place_Order 
 {
-	@FindBy(xpath = "/html/body/div[4]/div[1]/div[2]/ul[1]/li[2]/a" )
+	@FindBy(xpath = "/html/body/div[4]/div[1]/div[2]/ul[1]/li[2]/a")
 	static private WebElement Computer_link; 
 	
-	@FindBy(xpath = "/html/body/div[4]/div[1]/div[2]/ul[1]/li[2]/ul/li[1]/a" )
+	@FindBy(xpath = "/html/body/div[4]/div[1]/div[2]/ul[1]/li[2]/ul/li[1]/a")
 	static private WebElement desktop_link; 
 	
 	@FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[2]/div[3]/div[1]/div/div[2]/div[3]/div[2]/input" )
