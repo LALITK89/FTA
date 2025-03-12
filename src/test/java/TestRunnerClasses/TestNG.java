@@ -43,7 +43,7 @@ public class TestNG
          }
 	
 	 //Sign up the user	 
-      @Test(priority = 1,groups = {"Sanity"}, description = "Signup the user")
+      @Test(priority = 1,groups = {"Sanity", "Regression"}, description = "Signup the user")
       public void registerNewUser() throws Exception
          {
     	  String TCID = "TC001";
@@ -58,7 +58,7 @@ public class TestNG
          
       
       //Login the user
-      @Test(priority = 2,groups = {"Sanity"}, description = "Logging the user")
+      @Test(priority = 2,groups = {"Sanity","Regression"}, description = "Logging the user")
       public void loginTheUser() throws Exception
          {
     	  String TCID = "TC002";
