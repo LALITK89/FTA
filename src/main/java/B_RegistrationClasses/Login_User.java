@@ -10,7 +10,7 @@ import A_CommonUtilityclasses.Utility_Class;
 
 public class Login_User 
 {
-	@FindBy(xpath="/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a") //It will provide the identifier refecnece to below webelement
+	@FindBy(xpath = "//a[@class ='ico-login']") //It will provide the identifier reference to below webelement
 	static private WebElement Login_link; //It will use in same call only.
 	
 	@FindBy(id="Email")
@@ -22,7 +22,7 @@ public class Login_User
 	@FindBy(id="RememberMe")
 	static private WebElement Remeber_Chk;
 	
-	@FindBy(xpath="/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]/div[2]/div[2]/form/div[5]/input")
+	@FindBy(xpath = "//input[@class ='button-1 login-button']")
 	static private WebElement Login_btn;
 	
      

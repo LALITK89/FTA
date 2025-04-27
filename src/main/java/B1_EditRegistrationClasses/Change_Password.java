@@ -10,7 +10,7 @@ import A_CommonUtilityclasses.Utility_Class;
 
 public class Change_Password
 {
-	@FindBy(xpath="/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a")
+	@FindBy(xpath = "//a[@class ='ico-login']")
 	static private WebElement Login_link;
 	
 	@FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]/div[2]/div[2]/form/div[4]/span/a")

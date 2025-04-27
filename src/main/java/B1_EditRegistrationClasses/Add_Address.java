@@ -15,13 +15,13 @@ import A_CommonUtilityclasses.Utility_Class;
 
 public class Add_Address 
 {
-	@FindBy(xpath="/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[1]/a") //It will provide the identifier refecnece to below webelement
+	@FindBy(xpath = "/html/body/div[4]/div[1]/div[1]/div[2]/div[1]/ul/li[1]/a") //It will provide the identifier refecnece to below webelement
 	static private WebElement user_email; //It will use in same call only.
 	
-	@FindBy(xpath="/html/body/div[4]/div[1]/div[4]/div[1]/div/div[2]/ul/li[2]/a")
+	@FindBy(xpath ="/html/body/div[4]/div[1]/div[4]/div[1]/div/div[2]/ul/li[2]/a")
 	static private WebElement Address_link;
 	
-	@FindBy(xpath="/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[2]/input")
+	@FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[2]/input")
 	static private WebElement Add_btn;
 	
 	@FindBy(id="Address_FirstName")
@@ -60,7 +60,7 @@ public class Add_Address
 	@FindBy(id="Address_FaxNumber")
 	static private WebElement FaxNumber;
 	
-	@FindBy(xpath="/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[2]/input")
+	@FindBy(xpath = "/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[2]/input")
 	static private WebElement save_btn;
      
 	public void addAddress() throws HeadlessException, InvalidFormatException, IOException, AWTException
