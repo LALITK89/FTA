@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="Sanity"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="TestRunnerClasses.TestNG">
+        <methods>
+          <include name="clearCacheAndOpenBrowser"/>
+          <include name="loginTheUser"/>
+          <include name="addNewAddress"/>
+          <include name="registerNewUser"/>
+          <include name="placeTheOrder"/>
+          <include name="logoutTheUser"/>
+        </methods>
+      </class> <!-- TestRunnerClasses.TestNG -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
+=======
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
@@ -18,3 +43,4 @@
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
+>>>>>>> branch 'master' of git@github.com:LALITK89/FTA.git
